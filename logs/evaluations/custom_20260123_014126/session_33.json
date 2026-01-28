@@ -1,0 +1,187 @@
+{
+  "session_id": "4427222784",
+  "session_index": 33,
+  "num_turns": 11,
+  "num_goals_detected": 3,
+  "num_failures": 1,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "Can you help me find a place to stay? It'll need to have free parking.",
+      "agent_response": "they are many. what is your price range and prefered side?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1: finding hotel accommodation with free parking"
+    },
+    {
+      "turn_number": 2,
+      "user_message": "I just am looking for a 1 star hotel in the north.",
+      "agent_response": "I'm sorry, there aren't any hotels that meet your criteria. Would you like to try something else?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues hotel search, specifying 1-star in north"
+    },
+    {
+      "turn_number": 3,
+      "user_message": "Sure. How about 4 stars?",
+      "agent_response": "That narrows it down to about 7 options. I have 6 moderately priced ones, and 1 cheaper one. Do you have a preference?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing same hotel search, modifying star rating"
+    },
+    {
+      "turn_number": 4,
+      "user_message": "A moderate priced one will be fine. Any will do. I'll need it booked for Wednesday. I will be staying 2 nights with 6 people. ",
+      "agent_response": "Okay, I made you a reservation at the acorn guest house. Your reference number is 5MSB4H92. Can I do anything else for you today?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Completes hotel booking with specific details for same goal"
+    },
+    {
+      "turn_number": 5,
+      "user_message": "Now i need a place to dine. Cheap and Belgian food sounds good. ",
+      "agent_response": "I do not have anything matching that criteria. Is there another type of food you would like to try?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 2: finding a restaurant (new domain)"
+    },
+    {
+      "turn_number": 6,
+      "user_message": "How about Indian food?",
+      "agent_response": "What area would you like to be in?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues restaurant search, modifying cuisine type"
+    },
+    {
+      "turn_number": 7,
+      "user_message": "The area doesn't matter.",
+      "agent_response": "There are 4 indian restaurants that meet your criteria. I would recommend kohinoor. I really enjoy their food.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing restaurant options"
+    },
+    {
+      "turn_number": 8,
+      "user_message": "Can you reserve a table for me?",
+      "agent_response": "Sure, what day, time, and number of people would you like to book it for?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing restaurant goal, moving to booking phase"
+    },
+    {
+      "turn_number": 9,
+      "user_message": "I would like the booking for wednesday at 19:45 for a group of 6",
+      "agent_response": "I have you booked at mahal of cambridge, the reference number is 4B8HXAF2",
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E3",
+      "reasoning": "Agent books Mahal instead of previously recommended Kohinoor restaurant"
+    },
+    {
+      "turn_number": 10,
+      "user_message": "Lastly, I need a taxi between the two places, I would liek to get to the kohinoor restaurant by the booked time of 19:45.",
+      "agent_response": "Booking completed!\nBooked car type\t:\tblack skoda\nContact number\t:\t07910219263\n",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 3: booking taxi between venues (new domain)"
+    },
+    {
+      "turn_number": 11,
+      "user_message": "thanks for your help and have a good day",
+      "agent_response": "you're very welcome!",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Closing pleasantries, not a new goal"
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1: finding hotel accommodation with free parking"
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues hotel search, specifying 1-star in north"
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing same hotel search, modifying star rating"
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Completes hotel booking with specific details for same goal"
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 2: finding a restaurant (new domain)"
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues restaurant search, modifying cuisine type"
+    },
+    {
+      "turn_number": 7,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing restaurant options"
+    },
+    {
+      "turn_number": 8,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing restaurant goal, moving to booking phase"
+    },
+    {
+      "turn_number": 9,
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E3",
+      "reasoning": "Agent books Mahal instead of previously recommended Kohinoor restaurant"
+    },
+    {
+      "turn_number": 10,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 3: booking taxi between venues (new domain)"
+    },
+    {
+      "turn_number": 11,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Closing pleasantries, not a new goal"
+    }
+  ]
+}

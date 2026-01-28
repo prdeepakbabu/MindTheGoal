@@ -1,0 +1,59 @@
+{
+  "session_id": "4711655104",
+  "session_index": 44,
+  "num_turns": 3,
+  "num_goals_detected": 1,
+  "num_failures": 0,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "Hello.  Can you find a taxi to pick me up at Darry's Cookhouse and Wine Shop sometime after 04:00?",
+      "agent_response": "Not a problem. Where would you like to go?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user initiates new goal of booking a taxi from Darry's Cookhouse. Agent asks appropriate follow-up."
+    },
+    {
+      "turn_number": 2,
+      "user_message": "i would like to go to alexander bed and breakfast",
+      "agent_response": "Great, I've got a white lexus picking you up at 04:00, your contact number is 07605710484.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing same taxi booking goal - user provides destination and agent successfully books the taxi with details."
+    },
+    {
+      "turn_number": 3,
+      "user_message": "Thank you very much. I don't need anything else at this time.",
+      "agent_response": "You are welcome.  Have a nice time.  Good bye.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Natural conclusion to taxi booking goal. User confirms no other needs and agent provides appropriate closing."
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user initiates new goal of booking a taxi from Darry's Cookhouse. Agent asks appropriate follow-up."
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing same taxi booking goal - user provides destination and agent successfully books the taxi with details."
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Natural conclusion to taxi booking goal. User confirms no other needs and agent provides appropriate closing."
+    }
+  ]
+}

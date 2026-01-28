@@ -1,0 +1,107 @@
+{
+  "session_id": "4702142848",
+  "session_index": 95,
+  "num_turns": 6,
+  "num_goals_detected": 2,
+  "num_failures": 1,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "Hi, I'm looking for a train that's departing Cambridge and going to London Liverpool Street. ",
+      "agent_response": "I have the listings up for you, what date and time will you need that train?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user initiates Goal 1: booking a train from Cambridge to London Liverpool Street"
+    },
+    {
+      "turn_number": 2,
+      "user_message": "I need to travel on Thursday, and I need to arrive by no later than 16:15.",
+      "agent_response": "There are 5 results, depending on when you want to leave. There is a train that leaves at 11:59 and arrives by 13:27, will that be ok?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train booking goal - user specifies time constraints"
+    },
+    {
+      "turn_number": 3,
+      "user_message": "Yes, that will work can you book that for me?",
+      "agent_response": "Yes I can book that for you. How many people will be needing tickets?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing train booking - user confirms and requests booking"
+    },
+    {
+      "turn_number": 4,
+      "user_message": "I need tickets for 8 people. ",
+      "agent_response": "Your reference number is OWVUY7ZZ. The total fee is 132.8 GBP payable at the station. Do you need anything else?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Completing train booking with number of tickets and reference number"
+    },
+    {
+      "turn_number": 5,
+      "user_message": "Thanks and yes, now that you asked, I really would like to check out some colleges in the centre",
+      "agent_response": "You're in luck, we have 13 colleges in the centre. May I recommend Christ's College for you? It has free admission.",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 2: visiting colleges - completely new topic/domain"
+    },
+    {
+      "turn_number": 6,
+      "user_message": "could you please provide the address, phone number, and entrance fee.",
+      "agent_response": "Christs College is on St. Anfrews st. and phone is 01223334900",
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E3",
+      "reasoning": "Still discussing colleges, but agent provides incomplete information - missing entrance fee that was specifically requested"
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user initiates Goal 1: booking a train from Cambridge to London Liverpool Street"
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train booking goal - user specifies time constraints"
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing train booking - user confirms and requests booking"
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Completing train booking with number of tickets and reference number"
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 2: visiting colleges - completely new topic/domain"
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E3",
+      "reasoning": "Still discussing colleges, but agent provides incomplete information - missing entrance fee that was specifically requested"
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "session_id": "4717017664",
+  "session_index": 49,
+  "num_turns": 8,
+  "num_goals_detected": 3,
+  "num_failures": 1,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "Greetings. I'd like some information about vue cinema.",
+      "agent_response": "The vue cinema is located in the centre of the city and the phone number is 08712240240.",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about Vue cinema. This is Goal 1 (cinema information)."
+    },
+    {
+      "turn_number": 2,
+      "user_message": "What is the postcode?",
+      "agent_response": "The postcode is cb11ps. Can I help you with anything else?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about same cinema (postcode). Continues Goal 1."
+    },
+    {
+      "turn_number": 3,
+      "user_message": "Yes I am looking for an oriental restaurant that is relatively cheap . Any suggestions?",
+      "agent_response": "Dojo Noodle Bar, and J Restaurant are both located in the centre area. Would you like more info on either of these?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to finding an oriental restaurant - this is Goal 2 (different domain)."
+    },
+    {
+      "turn_number": 4,
+      "user_message": "Yes I would love to hear about either.",
+      "agent_response": "Both are in the centre of town and in the cheap price range.",
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E4",
+      "reasoning": "Continues restaurant discussion (Goal 2), but agent provides minimal info without specific details about either restaurant."
+    },
+    {
+      "turn_number": 5,
+      "user_message": "What is the phone number and address for Dojo Noodle Bar?",
+      "agent_response": "The phone number is 01223363471 and the address is 40210 Millers Yard City Centre. ",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about Dojo Noodle Bar details. Continues Goal 2."
+    },
+    {
+      "turn_number": 6,
+      "user_message": "Wonderful, now I will need a taxi to commute between the two. I want to leave the cinema by 20:45 to get to the restaurant.",
+      "agent_response": "Ok, not a problem! You will be looking for a yellow volkswagen and the taxis phone number is 07352155369.",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to booking taxi between venues - this is Goal 3 (new transportation domain)."
+    },
+    {
+      "turn_number": 7,
+      "user_message": "Thanks so much!",
+      "agent_response": "Is there anything else I can do for you today?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User expressing thanks, no new goal."
+    },
+    {
+      "turn_number": 8,
+      "user_message": "That is everything! Thank you for all your help!",
+      "agent_response": "Have a good day!",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Conversation closing, no new goal."
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about Vue cinema. This is Goal 1 (cinema information)."
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about same cinema (postcode). Continues Goal 1."
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to finding an oriental restaurant - this is Goal 2 (different domain)."
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E4",
+      "reasoning": "Continues restaurant discussion (Goal 2), but agent provides minimal info without specific details about either restaurant."
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about Dojo Noodle Bar details. Continues Goal 2."
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to booking taxi between venues - this is Goal 3 (new transportation domain)."
+    },
+    {
+      "turn_number": 7,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User expressing thanks, no new goal."
+    },
+    {
+      "turn_number": 8,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Conversation closing, no new goal."
+    }
+  ]
+}

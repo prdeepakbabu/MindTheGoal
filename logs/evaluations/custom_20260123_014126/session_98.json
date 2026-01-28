@@ -1,0 +1,107 @@
+{
+  "session_id": "4707961280",
+  "session_index": 98,
+  "num_turns": 6,
+  "num_goals_detected": 2,
+  "num_failures": 0,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "Yes, I am visiting cambridge, and would like to know what theatres are available in town",
+      "agent_response": "There are 5 theatres. Will you be in the centre or south part of Cambridge?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about theatres in Cambridge. This is Goal 1."
+    },
+    {
+      "turn_number": 2,
+      "user_message": "Oh I'm not picky, can you pick one for me?",
+      "agent_response": "I'm going to recommend The Junction for you.  It's located on Clifton Way.  Would you like the phone number to see what is playing and when?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing theatre discussion (same goal). Agent recommends The Junction."
+    },
+    {
+      "turn_number": 3,
+      "user_message": "No thank you. However, I am looking for a train. I need to depart from London Kings Cross and travel to Cambridge.",
+      "agent_response": "When would you like to travel?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to train booking (Goal 2) - completely different service/domain from theatres."
+    },
+    {
+      "turn_number": 4,
+      "user_message": "Wednesday and I need to leave after 13:30 please.",
+      "agent_response": "TR0397 will leave at 15:17 and arrive at 16:08. Would you be interested in booking this train?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train discussion, providing departure time details."
+    },
+    {
+      "turn_number": 5,
+      "user_message": "Yes, that would be fine. I need to make the booking for 8 people, please. ",
+      "agent_response": "I've booked that for you.  The reference number is 1LHOCOGA.  Anything else I can do for you?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing train booking, finalizing reservation for 8 people."
+    },
+    {
+      "turn_number": 6,
+      "user_message": "That is all. Thank you, good bye. ",
+      "agent_response": "Please contact us anytime. Goodbye.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Conversation closing, no new goal. Just saying goodbye."
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about theatres in Cambridge. This is Goal 1."
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing theatre discussion (same goal). Agent recommends The Junction."
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to train booking (Goal 2) - completely different service/domain from theatres."
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train discussion, providing departure time details."
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing train booking, finalizing reservation for 8 people."
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Conversation closing, no new goal. Just saying goodbye."
+    }
+  ]
+}

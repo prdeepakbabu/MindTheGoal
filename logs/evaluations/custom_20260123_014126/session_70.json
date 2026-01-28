@@ -1,0 +1,123 @@
+{
+  "session_id": "4705553088",
+  "session_index": 70,
+  "num_turns": 7,
+  "num_goals_detected": 3,
+  "num_failures": 0,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "I need a place to eat in the south that's expensive.",
+      "agent_response": "There are Chinese, Indian, Italian, and Mexican restaurants that fit that criteria. Do you have a preference?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1 (restaurant search)"
+    },
+    {
+      "turn_number": 2,
+      "user_message": "I would like Chinese or Mexican restaurants ",
+      "agent_response": "How about chiquito restaurant bar? It's an expensive and delicious restaurant in the south.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing restaurant discussion, narrowing preferences"
+    },
+    {
+      "turn_number": 3,
+      "user_message": "Sure, I need a table for 8 at 17:15 on Wednesday, please. ",
+      "agent_response": "Okay, I was able to reserve that table for you. Your reference number is XAL5QLX9.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still on restaurant goal - making the booking"
+    },
+    {
+      "turn_number": 4,
+      "user_message": "Thank you, what places can you go to that are in the same area?",
+      "agent_response": "There are a range of attractions in the south, including parks, nightclubs, a museum, a theatre, a cinema, and more general entertainment venues. What sort of attraction are you interested in?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 2 - asking about attractions in the area"
+    },
+    {
+      "turn_number": 5,
+      "user_message": "A museum sounds great. Can you get the phone number for one? ",
+      "agent_response": "Yes, the byard museum is reachable at 01223464646, they have free admission and are located at 14 king's parade, any other questions?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing attractions discussion - getting museum details"
+    },
+    {
+      "turn_number": 6,
+      "user_message": "That sounds very nice. Can you book me a taxi or car service between those two places? I'd like to arrive by my reservation time, please.",
+      "agent_response": "I was able to book a taxi for you. Be looking for a yellow Skoda. If you need to reach them, please call them at 07550666183. Is there anything else?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 3 - booking transportation between venues"
+    },
+    {
+      "turn_number": 7,
+      "user_message": "That would be all, thanks!",
+      "agent_response": "Thank you for using our service. Have a good day. Goodbye. ",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Closing conversation, no new goal"
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1 (restaurant search)"
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing restaurant discussion, narrowing preferences"
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still on restaurant goal - making the booking"
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 2 - asking about attractions in the area"
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing attractions discussion - getting museum details"
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 3 - booking transportation between venues"
+    },
+    {
+      "turn_number": 7,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Closing conversation, no new goal"
+    }
+  ]
+}

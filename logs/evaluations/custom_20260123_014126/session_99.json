@@ -1,0 +1,123 @@
+{
+  "session_id": "4711645632",
+  "session_index": 99,
+  "num_turns": 7,
+  "num_goals_detected": 2,
+  "num_failures": 1,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "I need a train that gets me into Cambridge by 21:30",
+      "agent_response": "sure, what day are you traveling?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1: finding a train to Cambridge"
+    },
+    {
+      "turn_number": 2,
+      "user_message": "I'm leaving on Saturday. I am coming from London Kings Cross. ",
+      "agent_response": "The TR7223 arrives in Cambridge at 20:08. Will that suit you?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train discussion, providing departure details"
+    },
+    {
+      "turn_number": 3,
+      "user_message": "Yes, could you book me tickets for 7 people on that train?",
+      "agent_response": "Absolutely! Go ahead and pay 132.16 GBP at the station for the 7 tickets. Would you like your reference number?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing same train booking, requesting tickets"
+    },
+    {
+      "turn_number": 4,
+      "user_message": "Can you recommend a cinema in the east?",
+      "agent_response": "There are no cinemas in the east. Can I help find something else?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 2: finding a cinema - completely new topic"
+    },
+    {
+      "turn_number": 5,
+      "user_message": "Actually, yes, I do need that reference number on that train.  And, maybe you could find a museum instead of a cinema?",
+      "agent_response": "reference number is K13L3ILC. ",
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E4",
+      "reasoning": "User asks two things: train reference (Goal 1) and museums (Goal 2). Agent only answers reference number"
+    },
+    {
+      "turn_number": 6,
+      "user_message": "What about a museum? Are there any of those in the east? If so, please give me some additional information including the entrance fee.",
+      "agent_response": "There are 4, I would recommend Cambridge Artworks 5 Greens Road, postcode cb13ef, number 01223902168. There is no entrance fee. Is there anything else I can assist you with?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing discussion about attractions (museums), same as previous goal"
+    },
+    {
+      "turn_number": 7,
+      "user_message": "Thank you.  You have covered everything.",
+      "agent_response": "thank you for using our system. have a good day.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Closing conversation, no new goal"
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1: finding a train to Cambridge"
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train discussion, providing departure details"
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing same train booking, requesting tickets"
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 2: finding a cinema - completely new topic"
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E4",
+      "reasoning": "User asks two things: train reference (Goal 1) and museums (Goal 2). Agent only answers reference number"
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing discussion about attractions (museums), same as previous goal"
+    },
+    {
+      "turn_number": 7,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Closing conversation, no new goal"
+    }
+  ]
+}

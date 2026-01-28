@@ -1,0 +1,155 @@
+{
+  "session_id": "4715921088",
+  "session_index": 77,
+  "num_turns": 9,
+  "num_goals_detected": 2,
+  "num_failures": 0,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "I need help finding a cheap restaurant",
+      "agent_response": "What type of cuisine would you like?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user initiates Goal 1: finding a cheap restaurant"
+    },
+    {
+      "turn_number": 2,
+      "user_message": "I'm interested in European cuisine. ",
+      "agent_response": "We have the river bar steakhouse and grill in the centre area, would you like more information?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing restaurant search (same goal) - specifying cuisine preference"
+    },
+    {
+      "turn_number": 3,
+      "user_message": "Can you book me a table there for 7 on Friday at 19:45?",
+      "agent_response": "Yes.  Your booking was successful.  The table will be reserved for 15 minutes.  Your reference number is ODB8T8HO.  Is there anything else I can help with?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still on restaurant goal - booking a table at previously discussed venue"
+    },
+    {
+      "turn_number": 4,
+      "user_message": "Yes can you help me find a train as well?",
+      "agent_response": "Sure! Where would you like to come from? What day of the week and what time?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 2: finding a train - new domain/service"
+    },
+    {
+      "turn_number": 5,
+      "user_message": "I would like to leave in Saturday.",
+      "agent_response": "We have several options!  Where would you like to go?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train discussion - specifying day of travel"
+    },
+    {
+      "turn_number": 6,
+      "user_message": "I would like to go to Ely please.",
+      "agent_response": "Do you have a time you need to leave or arrive by?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing train journey - specifying destination"
+    },
+    {
+      "turn_number": 7,
+      "user_message": "The train should arrive by 13:00 and should depart from cambridge.",
+      "agent_response": "Your best best is TR0721, leaving Cambridge at 11:50 and arriving Ely at 12:07. The trains only run every 2 hours on Saturdays.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train discussion - providing time and departure details"
+    },
+    {
+      "turn_number": 8,
+      "user_message": "Okay. Can you go ahead and book that train for 7 people please? And give me the reference number.",
+      "agent_response": "Booking was successful, the total fee is 24.64 GBP payable at the station .Reference number is : OKXUNQ4W",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Finalizing train booking - same goal"
+    },
+    {
+      "turn_number": 9,
+      "user_message": "Thanks for the help, goodbye!",
+      "agent_response": "You are welcome, enjoy your stay!",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Conversation closing - no new goal"
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user initiates Goal 1: finding a cheap restaurant"
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing restaurant search (same goal) - specifying cuisine preference"
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still on restaurant goal - booking a table at previously discussed venue"
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 2: finding a train - new domain/service"
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train discussion - specifying day of travel"
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing train journey - specifying destination"
+    },
+    {
+      "turn_number": 7,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train discussion - providing time and departure details"
+    },
+    {
+      "turn_number": 8,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Finalizing train booking - same goal"
+    },
+    {
+      "turn_number": 9,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Conversation closing - no new goal"
+    }
+  ]
+}

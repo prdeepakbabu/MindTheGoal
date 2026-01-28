@@ -1,0 +1,107 @@
+{
+  "session_id": "4703812416",
+  "session_index": 40,
+  "num_turns": 6,
+  "num_goals_detected": 2,
+  "num_failures": 0,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "Hello, I need a train on Wednesday arriving at 14:30.",
+      "agent_response": "Ok, I can help you with that. Where will you be departing from?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user initiates Goal 1: booking a train for Wednesday. Agent appropriately asks for departure location."
+    },
+    {
+      "turn_number": 2,
+      "user_message": "I am departing from Cambridge and going to Leicester and I need to arrive by 14:30.",
+      "agent_response": "TR2176 leaves at 09:21. can i book for you?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues train booking goal by providing departure/arrival cities. Agent finds suitable train."
+    },
+    {
+      "turn_number": 3,
+      "user_message": "please make a booking for 3 people. Make sure you get the reference number",
+      "agent_response": "Booking was successful, the total fee is 113.4 GBP payable at the station . Reference number is : FHU6LGXD. is there anything else i could help you with?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still part of train booking goal - user requests booking for 3 people. Agent successfully books and provides reference."
+    },
+    {
+      "turn_number": 4,
+      "user_message": "I'm looking for some information about a and b guest house.",
+      "agent_response": "It is located in the east, is moderately priced, and has a 4 star rating.  It has free internet.  It's located at 124 Tenison Road.",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 2: inquiring about A and B guest house - completely different domain (accommodation). Agent provides details."
+    },
+    {
+      "turn_number": 5,
+      "user_message": "Thank you. Can I also get the phone number?",
+      "agent_response": "Sure. Their phone number is 01223315702. Anything more I can help with?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about same guest house (phone number) - same goal. Agent provides requested info."
+    },
+    {
+      "turn_number": 6,
+      "user_message": "No, that is all I need for now.",
+      "agent_response": "It's been my pleasure. Goodbye",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Conversation closing - no new goal. Agent properly concludes conversation."
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user initiates Goal 1: booking a train for Wednesday. Agent appropriately asks for departure location."
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues train booking goal by providing departure/arrival cities. Agent finds suitable train."
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still part of train booking goal - user requests booking for 3 people. Agent successfully books and provides reference."
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 2: inquiring about A and B guest house - completely different domain (accommodation). Agent provides details."
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about same guest house (phone number) - same goal. Agent provides requested info."
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Conversation closing - no new goal. Agent properly concludes conversation."
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "session_id": "4720135680",
+  "session_index": 41,
+  "num_turns": 9,
+  "num_goals_detected": 1,
+  "num_failures": 2,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "I'm interested in rooms for the night where you can get free wifi.",
+      "agent_response": "There are 32 hotels or guesthouses with free wifi. What price range are you looking for?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1: finding hotel with wifi. Agent provides helpful response about available options."
+    },
+    {
+      "turn_number": 2,
+      "user_message": "I'm looking for something in a moderate price range, but it must have at least a 4 star rating.",
+      "agent_response": "What part of town are you interested in? East, north or south?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues same hotel search goal, adding constraints (price, rating). Agent appropriately asks for location preference."
+    },
+    {
+      "turn_number": 3,
+      "user_message": "I don't have a preference for the area. ",
+      "agent_response": "How about a and b guest house?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing same hotel search, user responds about area preference. Agent suggests specific hotel."
+    },
+    {
+      "turn_number": 4,
+      "user_message": "that will be nice. get me the reference numbers",
+      "agent_response": "When would you like to book this for?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User accepts hotel suggestion, moving to booking phase of same goal. Agent asks for booking details."
+    },
+    {
+      "turn_number": 5,
+      "user_message": "Please book for Sunday for 3 nights and 6 people.",
+      "agent_response": "Sorry, the hotel can't accommodate you for that time frame? Want to try a different date?",
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E4",
+      "reasoning": "Same booking goal. Agent fails to secure booking for requested dates/people."
+    },
+    {
+      "turn_number": 6,
+      "user_message": "No, I need it for those days. Can you try different hotel?",
+      "agent_response": "I can try for the Acorn Guest House, if you'd like. They're on Chesterton Road.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still pursuing same hotel booking goal, trying alternative hotel. Agent suggests Acorn Guest House."
+    },
+    {
+      "turn_number": 7,
+      "user_message": "Sounds good. Can you try and book that one please.",
+      "agent_response": "Sorry, the Acorn Guest house is not able to accomodate you either. I checked with the other moderately priced 4 star lodgings with free wifi, and none have those dates available. Will any other stay w...",
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E4",
+      "reasoning": "Same booking goal. Agent fails to secure booking at alternative hotel and reports no availability for specified criteria."
+    },
+    {
+      "turn_number": 8,
+      "user_message": "Can we try for just 2 nights then?",
+      "agent_response": "I've booked that for you. The reference number is 3CRY3DDP. May I help with anything else?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still same booking goal, modifying stay length. Agent successfully books room and provides reference."
+    },
+    {
+      "turn_number": 9,
+      "user_message": "nope, that's all I need thank you!",
+      "agent_response": "You're welcome. Have a great day.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Concluding same hotel booking goal. Agent appropriately closes conversation."
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1: finding hotel with wifi. Agent provides helpful response about available options."
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues same hotel search goal, adding constraints (price, rating). Agent appropriately asks for location preference."
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing same hotel search, user responds about area preference. Agent suggests specific hotel."
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User accepts hotel suggestion, moving to booking phase of same goal. Agent asks for booking details."
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E4",
+      "reasoning": "Same booking goal. Agent fails to secure booking for requested dates/people."
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still pursuing same hotel booking goal, trying alternative hotel. Agent suggests Acorn Guest House."
+    },
+    {
+      "turn_number": 7,
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E4",
+      "reasoning": "Same booking goal. Agent fails to secure booking at alternative hotel and reports no availability for specified criteria."
+    },
+    {
+      "turn_number": 8,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still same booking goal, modifying stay length. Agent successfully books room and provides reference."
+    },
+    {
+      "turn_number": 9,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Concluding same hotel booking goal. Agent appropriately closes conversation."
+    }
+  ]
+}

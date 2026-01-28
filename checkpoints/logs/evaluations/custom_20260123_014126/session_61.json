@@ -1,0 +1,187 @@
+{
+  "session_id": "4428197824",
+  "session_index": 61,
+  "num_turns": 11,
+  "num_goals_detected": 3,
+  "num_failures": 0,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "Hello!  I am planning my trip to Cambridge and need information on places to stay. ",
+      "agent_response": "ok Id be happy to help with that would you like a guesthouse or Hotel",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1 asking about accommodation in Cambridge"
+    },
+    {
+      "turn_number": 2,
+      "user_message": "i don't have a preference. I would like a room with a 0 star and free parking",
+      "agent_response": "Okay there is city centre north b and b would you like me to book it for you?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing accommodation search, specifying preferences"
+    },
+    {
+      "turn_number": 3,
+      "user_message": "I prefer one in the east. How about a 4 star hotel with free parking there instead?",
+      "agent_response": "There are no 4 star hotels in the east section of town that offers free parking. Would you like to search for a guesthouse?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing accommodation, modifying preferences for location and stars"
+    },
+    {
+      "turn_number": 4,
+      "user_message": "Yes that is fine I need the price range as well. ",
+      "agent_response": "I have several options in the cheap or moderate price range with parking and wifi. How does the leverton house sound? ",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing accommodation discussion, asking about price range"
+    },
+    {
+      "turn_number": 5,
+      "user_message": "What is the price range of the Leverton House?",
+      "agent_response": "It's cheap. Would you like me to book a room for you?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about same accommodation"
+    },
+    {
+      "turn_number": 6,
+      "user_message": "Yes please. I also need a train that leaves after 9:00 on sunday",
+      "agent_response": "Can you please tell me how long your stay at the Leverton will be? What day will you be checking in and how many people?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User introduces Goal 2 - train booking ('I also need a train')"
+    },
+    {
+      "turn_number": 7,
+      "user_message": "Actually, I apologize no need to book, I was just gathering information.  But I do need information on a train from leicester to cambridge.",
+      "agent_response": "TR1079 leaves at 09:09 would that work for you?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train discussion, providing specific route details"
+    },
+    {
+      "turn_number": 8,
+      "user_message": "That works for me.",
+      "agent_response": "Is there anything else I can help you with today, bookings or more information? ",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Confirming train selection"
+    },
+    {
+      "turn_number": 9,
+      "user_message": "Can you tell me the price of the train ticket, please?",
+      "agent_response": "The price of the train is 30.24 pounds.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about train price"
+    },
+    {
+      "turn_number": 10,
+      "user_message": "Thank you so much, that's all I need. ",
+      "agent_response": "You are very welcome! I hope you have a wonderful visit.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Closing conversation about train booking"
+    },
+    {
+      "turn_number": 11,
+      "user_message": "I hope so. Can I call any time?",
+      "agent_response": "We are available anytime, enjoy the rest of your day.  ",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "New Goal 3 - asking about service availability"
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1 asking about accommodation in Cambridge"
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing accommodation search, specifying preferences"
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing accommodation, modifying preferences for location and stars"
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing accommodation discussion, asking about price range"
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about same accommodation"
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User introduces Goal 2 - train booking ('I also need a train')"
+    },
+    {
+      "turn_number": 7,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train discussion, providing specific route details"
+    },
+    {
+      "turn_number": 8,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Confirming train selection"
+    },
+    {
+      "turn_number": 9,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about train price"
+    },
+    {
+      "turn_number": 10,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Closing conversation about train booking"
+    },
+    {
+      "turn_number": 11,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "New Goal 3 - asking about service availability"
+    }
+  ]
+}

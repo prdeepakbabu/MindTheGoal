@@ -1,0 +1,97 @@
+{
+  "version": "1.0",
+  "categories": {
+    "E1": {
+      "code": "E1",
+      "name": "Language Understanding Failure",
+      "description": "Misunderstood user's request or context",
+      "examples": [
+        "Interpreted 'book a table for 2' as 'book 2 tables'",
+        "Confused 'cheap' restaurant with 'Chinese' restaurant",
+        "Missed negation: 'I don't want Indian food'"
+      ],
+      "keywords": ["misunderstand", "misinterpret", "confusion", "wrong interpretation"],
+      "enabled": true,
+      "color": "#ef4444"
+    },
+    "E2": {
+      "code": "E2",
+      "name": "Refusal to Answer",
+      "description": "Inappropriate refusal despite ability to help",
+      "examples": [
+        "Refused to provide restaurant recommendations claiming privacy concerns",
+        "Declined to help with booking citing unclear policies",
+        "Said 'I cannot help with that' for a valid request"
+      ],
+      "keywords": ["refuse", "cannot", "won't", "unable", "decline"],
+      "enabled": true,
+      "color": "#f59e0b"
+    },
+    "E3": {
+      "code": "E3",
+      "name": "Incorrect Retrieval",
+      "description": "Retrieved wrong informational content",
+      "examples": [
+        "Provided wrong address for the restaurant",
+        "Gave incorrect operating hours",
+        "Listed wrong amenities for a hotel"
+      ],
+      "keywords": ["wrong information", "incorrect", "inaccurate", "false"],
+      "enabled": true,
+      "color": "#ec4899"
+    },
+    "E4": {
+      "code": "E4",
+      "name": "Retrieval Failure",
+      "description": "Failed to retrieve any relevant information",
+      "examples": [
+        "Could not find any restaurants matching criteria",
+        "Failed to look up booking confirmation",
+        "No results returned when results exist"
+      ],
+      "keywords": ["not found", "no results", "couldn't find", "unavailable"],
+      "enabled": true,
+      "color": "#8b5cf6"
+    },
+    "E5": {
+      "code": "E5",
+      "name": "System Error",
+      "description": "Technical issues (timeout, truncation, integration failure)",
+      "examples": [
+        "Response was cut off mid-sentence",
+        "API timeout during booking",
+        "Database connection failure"
+      ],
+      "keywords": ["error", "timeout", "failed", "truncated", "technical"],
+      "enabled": true,
+      "color": "#3b82f6"
+    },
+    "E6": {
+      "code": "E6",
+      "name": "Incorrect Routing",
+      "description": "Query routed to wrong domain/module",
+      "examples": [
+        "Hotel query handled by restaurant module",
+        "Taxi request processed as train booking",
+        "Wrong skill or intent triggered"
+      ],
+      "keywords": ["wrong domain", "misrouted", "wrong module", "incorrect handler"],
+      "enabled": true,
+      "color": "#14b8a6"
+    },
+    "E7": {
+      "code": "E7",
+      "name": "Out-of-Domain",
+      "description": "Request outside system's designed scope",
+      "examples": [
+        "User asked for medical advice in restaurant bot",
+        "Request for services not offered",
+        "Question about topics outside bot's knowledge"
+      ],
+      "keywords": ["out of scope", "not supported", "beyond capability"],
+      "enabled": true,
+      "color": "#6b7280"
+    }
+  },
+  "prompt_template": "Classify the failure using one of these Root Cause of Failure (RCOF) categories:\n\n{categories}\n\nRespond with only the code (E1-E7) that best describes the failure."
+}

@@ -1,0 +1,123 @@
+{
+  "session_id": "4721009024",
+  "session_index": 52,
+  "num_turns": 7,
+  "num_goals_detected": 3,
+  "num_failures": 1,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "I will be visiting family in the south part of cambridge and we would liek to get one last boating excursion in.  Any boating places in the south area?",
+      "agent_response": "It looks like there isn't any boating in the south area.  Would you like me to look in a different area of town? ",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about boating attractions in south Cambridge. Goal 1: Finding boating activities."
+    },
+    {
+      "turn_number": 2,
+      "user_message": "How about a nightclub in the south?",
+      "agent_response": "Sure, The Place is on 22 sidney street and the postcode is cb23hg. Phone number is 01223324600. ",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to new goal - looking for nightclubs instead of boating. Goal 2: Finding nightclub."
+    },
+    {
+      "turn_number": 3,
+      "user_message": "Thank you for all your help.",
+      "agent_response": "Is there anything else I can help you with? ",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Simple thank you, continuing previous nightclub discussion."
+    },
+    {
+      "turn_number": 4,
+      "user_message": "i would like place to stay. The hotel should be in the type of guesthouse and should include free wifi",
+      "agent_response": "aylesbray lodge guest house is a nice four star guesthose with internet available. Would you like me to book you a room?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to accommodation search. Goal 3: Finding guesthouse with wifi."
+    },
+    {
+      "turn_number": 5,
+      "user_message": "I would prefer a guest house that has one star.  Is there one available also with free wifi?",
+      "agent_response": "No, I'm sorry there are no 1 start guesthouses offering free wifi. Is there anything else I can help you with?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up on same guesthouse search, modifying star rating requirement."
+    },
+    {
+      "turn_number": 6,
+      "user_message": "Okay, the four will be fine, then. I don't need to book, yet. Thanks for your help.",
+      "agent_response": "No problem. Are you sure you don't want to go ahead and make a reservation?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing guesthouse discussion, accepting 4-star option."
+    },
+    {
+      "turn_number": 7,
+      "user_message": "Can you book it for 4 people for 2 nights starting friday?",
+      "agent_response": "Okay.  I have a reservation for 4 for two nights starting Friday.",
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E4",
+      "reasoning": "Same guesthouse goal, but agent fails to confirm if booking was successful or provide booking reference."
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about boating attractions in south Cambridge. Goal 1: Finding boating activities."
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to new goal - looking for nightclubs instead of boating. Goal 2: Finding nightclub."
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Simple thank you, continuing previous nightclub discussion."
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to accommodation search. Goal 3: Finding guesthouse with wifi."
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up on same guesthouse search, modifying star rating requirement."
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing guesthouse discussion, accepting 4-star option."
+    },
+    {
+      "turn_number": 7,
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E4",
+      "reasoning": "Same guesthouse goal, but agent fails to confirm if booking was successful or provide booking reference."
+    }
+  ]
+}

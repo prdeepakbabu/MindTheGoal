@@ -1,0 +1,123 @@
+{
+  "session_id": "4718544128",
+  "session_index": 54,
+  "num_turns": 7,
+  "num_goals_detected": 2,
+  "num_failures": 1,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "I want to know about the Cambridge and County Folk Museum",
+      "agent_response": "It is a lovely museum located in the west part of town, at 2-3 castle street.  Can I get a phone number for you?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about folk museum. This is Goal 1."
+    },
+    {
+      "turn_number": 2,
+      "user_message": "No but I do need the address please. ",
+      "agent_response": "The address is 2-3 castle street.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about same museum (address). Continues Goal 1."
+    },
+    {
+      "turn_number": 3,
+      "user_message": "Great!  I also need a moderately priced hotel that is in the east.  Can you help?",
+      "agent_response": "Is free paring and internet important to you?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to hotel search ('I also need') - this is Goal 2. Different domain."
+    },
+    {
+      "turn_number": 4,
+      "user_message": "Free wifi would be great. I don't care about the parking. ",
+      "agent_response": "I found a few guesthouses.  Would that type of room be ok with you?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues hotel discussion, specifying preferences. Part of Goal 2."
+    },
+    {
+      "turn_number": 5,
+      "user_message": "are any of them a 4 star?",
+      "agent_response": "I have three that are 4 star. Shall I book one?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing hotel requirements (star rating). Continues Goal 2."
+    },
+    {
+      "turn_number": 6,
+      "user_message": "Yes, please book for 5 people and 2 nights starting on wednesday.",
+      "agent_response": "Okay, I recommend the Warkworth House. I want to make sure this is okay with you before I go ahead and make a reservation. ",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Moving to booking the hotel discussed. Same Goal 2."
+    },
+    {
+      "turn_number": 7,
+      "user_message": "Yes, that sounds great. Can I please have the reference number as well? ",
+      "agent_response": "Your reservations have been made for five people for two nights beginning Wednesday.  ",
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E4",
+      "reasoning": "Agent failed to provide requested reference number. Still part of hotel booking Goal 2."
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about folk museum. This is Goal 1."
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about same museum (address). Continues Goal 1."
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to hotel search ('I also need') - this is Goal 2. Different domain."
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues hotel discussion, specifying preferences. Part of Goal 2."
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing hotel requirements (star rating). Continues Goal 2."
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Moving to booking the hotel discussed. Same Goal 2."
+    },
+    {
+      "turn_number": 7,
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E4",
+      "reasoning": "Agent failed to provide requested reference number. Still part of hotel booking Goal 2."
+    }
+  ]
+}

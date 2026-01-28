@@ -1,0 +1,139 @@
+{
+  "session_id": "4422010560",
+  "session_index": 46,
+  "num_turns": 8,
+  "num_goals_detected": 2,
+  "num_failures": 0,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "I need a train that is departing from cambridge and should leave on sunday.",
+      "agent_response": "Where will you be going?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1: booking a train from Cambridge on Sunday"
+    },
+    {
+      "turn_number": 2,
+      "user_message": "I will be going to ely and I would like it to arrive by 11:45.",
+      "agent_response": "Train TR2475 leaves at 07:50 and arrives by 08:07 on Sunday. Would you like to book this now?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train booking goal - providing destination and time constraints"
+    },
+    {
+      "turn_number": 3,
+      "user_message": "Could I have the price for that train please?",
+      "agent_response": "They are 3.52 pounds each",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about train price - same booking goal"
+    },
+    {
+      "turn_number": 4,
+      "user_message": "Yes could you book that for me?",
+      "agent_response": "Yes, I can book that for you.  Can I confirm that this is for one person, or do you need more than one ticket?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train booking process - same goal"
+    },
+    {
+      "turn_number": 5,
+      "user_message": "Please. I am also looking for a museum in the east please. ",
+      "agent_response": "In the east we have four museums cambridge artworks, cambridge museum of technology, gallery at twelve a high street and saint barnabas press gallery. ",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 2: finding a museum in the east - new domain/service"
+    },
+    {
+      "turn_number": 6,
+      "user_message": "Could you tell me the entrance fee and address for the Cambridge Museum of Technology?",
+      "agent_response": "the entrance fee for cambridge museum of technology is 5 pounds.  shall I get tickets for you if so how many?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about museum details - same museum goal"
+    },
+    {
+      "turn_number": 7,
+      "user_message": "That won't be necessary. Can you tell me the postcode for the museum?",
+      "agent_response": "The postcode is cb58ld. Is there anything else I can help you with?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing museum inquiry with postcode request - same goal"
+    },
+    {
+      "turn_number": 8,
+      "user_message": "No thank you, that will be all.",
+      "agent_response": "Alright then. Have a wonderful day. Goodbye. ",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Conversation closing - no new goal"
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1: booking a train from Cambridge on Sunday"
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train booking goal - providing destination and time constraints"
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about train price - same booking goal"
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train booking process - same goal"
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 2: finding a museum in the east - new domain/service"
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about museum details - same museum goal"
+    },
+    {
+      "turn_number": 7,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing museum inquiry with postcode request - same goal"
+    },
+    {
+      "turn_number": 8,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Conversation closing - no new goal"
+    }
+  ]
+}

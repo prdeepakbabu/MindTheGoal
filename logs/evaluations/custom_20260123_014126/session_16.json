@@ -1,0 +1,139 @@
+{
+  "session_id": "4714266496",
+  "session_index": 16,
+  "num_turns": 8,
+  "num_goals_detected": 3,
+  "num_failures": 0,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "Hi, I am so excited to see some local tourist attractions on my upcoming trip.  Can you help me find a place to dine when I am there?",
+      "agent_response": "Of course I can help you with that. May I ask your price range and what kind of food you would like to eat? ",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about restaurants. This is Goal 1."
+    },
+    {
+      "turn_number": 2,
+      "user_message": "I would like expensive italian food.  What do you suggest?",
+      "agent_response": "Does it matter where your restaurant is located? We have four expensive italian restaurants in the center, and one in the south. ",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing restaurant discussion with specific preferences."
+    },
+    {
+      "turn_number": 3,
+      "user_message": "I would like the one in the South. ",
+      "agent_response": "I would recommend Frankie and Bennys. Would you like any particular information about that restaurant? ",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing same restaurant goal, selecting location."
+    },
+    {
+      "turn_number": 4,
+      "user_message": "Please book that one for 5 people on Thursday at 17:30.",
+      "agent_response": "Booking was successful. The table will be reserved for 15 minutes on Thursday at 17:30. Your reference number is IIL1W17L",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Completing restaurant booking - same goal."
+    },
+    {
+      "turn_number": 5,
+      "user_message": "I am also looking for a swimming pool. ",
+      "agent_response": "I would recommend parkside pools in the centre, would you like more information?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to new topic (swimming pool) - Goal 2."
+    },
+    {
+      "turn_number": 6,
+      "user_message": "Where is the area the swimming pool is? Also can i have contact number and Car type of a taxi to commute between these to place on time.",
+      "agent_response": "The pool is located in the centre. For your taxi what time would like to leave the restaurant and arrive at the pool?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User asks about taxi service - Goal 3."
+    },
+    {
+      "turn_number": 7,
+      "user_message": "Well, my reservation is at 17:30 so before that.",
+      "agent_response": "Ok that is reserved the car type is a white skoda and contact number is 07749508592.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing taxi booking discussion."
+    },
+    {
+      "turn_number": 8,
+      "user_message": "Great thank you, that was all I needed today.",
+      "agent_response": "I hope you have a great trip!",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Closing conversation, no new goal."
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about restaurants. This is Goal 1."
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing restaurant discussion with specific preferences."
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing same restaurant goal, selecting location."
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Completing restaurant booking - same goal."
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to new topic (swimming pool) - Goal 2."
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User asks about taxi service - Goal 3."
+    },
+    {
+      "turn_number": 7,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing taxi booking discussion."
+    },
+    {
+      "turn_number": 8,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Closing conversation, no new goal."
+    }
+  ]
+}

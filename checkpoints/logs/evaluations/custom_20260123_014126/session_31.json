@@ -1,0 +1,139 @@
+{
+  "session_id": "4700063104",
+  "session_index": 31,
+  "num_turns": 8,
+  "num_goals_detected": 2,
+  "num_failures": 2,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "I need to find a British restaurant in West Cambridge.",
+      "agent_response": "There are multiple options for you. To narrow them down what price range do you have in mind?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1: finding a British restaurant"
+    },
+    {
+      "turn_number": 2,
+      "user_message": "No, can you recommend a favorite?",
+      "agent_response": "I would recommend Graffiti.  It is a bit expensive, so if you want something moderately price there is also Saint Johns Chop House. ",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing restaurant discussion, asking for recommendation"
+    },
+    {
+      "turn_number": 3,
+      "user_message": "Please book 2 tables for 8 people on friday also i need train tickets for 8 people.",
+      "agent_response": "What time would you like these reservations?",
+      "is_new_goal": true,
+      "quality": "failure",
+      "rcof": "E1",
+      "reasoning": "User introduces Goal 2: train tickets. Agent ignores train request, only asks about restaurant booking"
+    },
+    {
+      "turn_number": 4,
+      "user_message": "Graffiti sounds good.  I actually need that reservation for 5 people at 20:00 on Wednesday. Can I have the reference number for that?",
+      "agent_response": "Booking was successful. The table will be reserved for 15 minutes.\nReference number is : YYPPDY56. anything else i could help you with?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing restaurant booking (Goal 1), modifying details. Successfully books table"
+    },
+    {
+      "turn_number": 5,
+      "user_message": "I would also like a train departing from london liverpool street and arriving in Cambridge at 09:00 on the same day.",
+      "agent_response": "There are two trains that would work. One arrives at 07:07 and the other arrives at 01:07. Which one would you prefer?",
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E3",
+      "reasoning": "Continuing train discussion (Goal 2). Agent provides incorrect times that don't match requested 09:00 arrival"
+    },
+    {
+      "turn_number": 6,
+      "user_message": "Can you book the train that arrives at 07:07 that one would work great. I need the reference number as well. ",
+      "agent_response": "i can definitely do that, how many tickets would you like?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing train booking (Goal 2)"
+    },
+    {
+      "turn_number": 7,
+      "user_message": "it's for the same group of people",
+      "agent_response": "Alright, I've booked a train for your group, the reference number is AOIMGBHK, and there will be an 83 GBP fee at the station.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Completing train booking (Goal 2) with reference number"
+    },
+    {
+      "turn_number": 8,
+      "user_message": "Great, thanks!  That's all I needed right now!",
+      "agent_response": "You're welcome. Have a great day.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Closing conversation, no new goals"
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1: finding a British restaurant"
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing restaurant discussion, asking for recommendation"
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": true,
+      "quality": "failure",
+      "rcof": "E1",
+      "reasoning": "User introduces Goal 2: train tickets. Agent ignores train request, only asks about restaurant booking"
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing restaurant booking (Goal 1), modifying details. Successfully books table"
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E3",
+      "reasoning": "Continuing train discussion (Goal 2). Agent provides incorrect times that don't match requested 09:00 arrival"
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing train booking (Goal 2)"
+    },
+    {
+      "turn_number": 7,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Completing train booking (Goal 2) with reference number"
+    },
+    {
+      "turn_number": 8,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Closing conversation, no new goals"
+    }
+  ]
+}

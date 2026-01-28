@@ -1,0 +1,123 @@
+{
+  "session_id": "4719194688",
+  "session_index": 25,
+  "num_turns": 7,
+  "num_goals_detected": 2,
+  "num_failures": 0,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "Do you know what this city might have in entertainment venues? ",
+      "agent_response": "There are two entertainment venues in the east, two in the south and one in the west area of town.  Do you have an area preference?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about entertainment venues. This is Goal 1."
+    },
+    {
+      "turn_number": 2,
+      "user_message": "I don't care about the area.  If you were me, which one would you enjoy the most?",
+      "agent_response": "I would pick whale of a time in the west, located at Unit 8, Viking Way, Bar Hill, postcode cb238el. It is always an adventure there!",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about same entertainment venues topic. Agent recommends specific venue."
+    },
+    {
+      "turn_number": 3,
+      "user_message": "Is there a place to stay with a moderate price range and free parking?",
+      "agent_response": "Which area and type of lodging do you prefer?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to accommodation search - this is Goal 2. Different domain from entertainment."
+    },
+    {
+      "turn_number": 4,
+      "user_message": "I'm looking for a place that is moderately priced and has free parking.",
+      "agent_response": "The Acorn Guest House is a great little 4-star place on the north side. They're moderately priced and have free parking and internet. Would you like a room there?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Repeating same hotel request, same goal. Agent provides specific hotel recommendation."
+    },
+    {
+      "turn_number": 5,
+      "user_message": "That is all the information I need. Thank you!",
+      "agent_response": "You're very welcome. Have a great trip!",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User closing conversation about hotel info, same goal."
+    },
+    {
+      "turn_number": 6,
+      "user_message": "Wait! I do want the hotel reservation. Can you book it for me on Thursday for 4 nights for 4 people?",
+      "agent_response": "Your room at the Acorn is booked, ref#94RRN05R. Is there anything else I can help you with today?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User requests booking of previously discussed hotel - same goal, just moving to booking phase."
+    },
+    {
+      "turn_number": 7,
+      "user_message": "No that is all the info I need. I'm sure of it this time ha ha. Thank you!",
+      "agent_response": "you're welcome to use our services anytime",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Final closing of conversation, no new goal."
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about entertainment venues. This is Goal 1."
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about same entertainment venues topic. Agent recommends specific venue."
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to accommodation search - this is Goal 2. Different domain from entertainment."
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Repeating same hotel request, same goal. Agent provides specific hotel recommendation."
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User closing conversation about hotel info, same goal."
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User requests booking of previously discussed hotel - same goal, just moving to booking phase."
+    },
+    {
+      "turn_number": 7,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Final closing of conversation, no new goal."
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "session_id": "4721968384",
+  "session_index": 75,
+  "num_turns": 6,
+  "num_goals_detected": 1,
+  "num_failures": 0,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "I am looking for a restaurant serving Persian food in the expensive price range.",
+      "agent_response": "I'm sorry, there aren't any expensive Persian restaurants. Would you like me to check for a different type of food? ",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1: finding an expensive Persian restaurant. Agent appropriately indicates none available."
+    },
+    {
+      "turn_number": 2,
+      "user_message": "How about any restaurant in the centre?",
+      "agent_response": "There are 33 expensive restaurants in the center of town. Which cuisine type would you prefer? ",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues same restaurant search goal, just modifying constraints (any cuisine in centre). Agent provides helpful info."
+    },
+    {
+      "turn_number": 3,
+      "user_message": "I think I'd like to try Indian food, are there any of those in the center of town? ",
+      "agent_response": "There are 6 restaurants that fit your request. Curry Garden, The Golden Curry, Saffron Brasserie, Panahar, Curry King, and Curry Queen.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still pursuing same restaurant goal, narrowing down to Indian cuisine. Agent provides specific options."
+    },
+    {
+      "turn_number": 4,
+      "user_message": "Any of them would be fine.",
+      "agent_response": "Alright, shall I make a reservation for the Curry King?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing restaurant booking process, agent offers specific venue."
+    },
+    {
+      "turn_number": 5,
+      "user_message": "Yes please, for 3 people t 15:30 on Friday. Thank you.",
+      "agent_response": "Okay done. The reference number for your table is BVK9XZPJ and it is only reserved for 15 minutes.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Completing same restaurant booking goal with specific details. Agent confirms booking."
+    },
+    {
+      "turn_number": 6,
+      "user_message": "That's awesome. Thanks that's all i need!",
+      "agent_response": "You're welcome. Bon appetit! ",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Concluding the restaurant booking goal. No new goals introduced."
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1: finding an expensive Persian restaurant. Agent appropriately indicates none available."
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues same restaurant search goal, just modifying constraints (any cuisine in centre). Agent provides helpful info."
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still pursuing same restaurant goal, narrowing down to Indian cuisine. Agent provides specific options."
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing restaurant booking process, agent offers specific venue."
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Completing same restaurant booking goal with specific details. Agent confirms booking."
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Concluding the restaurant booking goal. No new goals introduced."
+    }
+  ]
+}

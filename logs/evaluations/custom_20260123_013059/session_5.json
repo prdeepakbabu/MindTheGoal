@@ -1,0 +1,155 @@
+{
+  "session_id": "4478411200",
+  "session_index": 5,
+  "num_turns": 9,
+  "num_goals_detected": 2,
+  "num_failures": 0,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "I need a train to London Kings Cross on Wednesday.",
+      "agent_response": "I can help with that. Where are you departing from?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1: finding a train to London Kings Cross"
+    },
+    {
+      "turn_number": 2,
+      "user_message": "I will be departing from Cambridge, and need to arrive by 08:30",
+      "agent_response": "The TR1058 Leaves Cambridge at 7:00 and gets into London Kings Cross at 7:51. The cost is 23.60. Would you like to book it?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train discussion, providing specific departure details"
+    },
+    {
+      "turn_number": 3,
+      "user_message": "That won't be necessary, thanks for your help.",
+      "agent_response": "Is there anything else you need today?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Concluding train discussion, user declines booking"
+    },
+    {
+      "turn_number": 4,
+      "user_message": "Yes, I would like to see an attraction in the centre of town.",
+      "agent_response": "We have many fine attractions in the center of town. Do you have a specific type in mind?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 2: finding attractions in town center - new domain"
+    },
+    {
+      "turn_number": 5,
+      "user_message": "Yes, please. Multiple sports would be great. If not, theatre is my second choice. ",
+      "agent_response": "There are no multiple sports places, might i recommend mumford theatre?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing attractions discussion, specifying preferences"
+    },
+    {
+      "turn_number": 6,
+      "user_message": "No thank you that will be all\n",
+      "agent_response": "I have more theatre attractions if you're interested.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still on attractions topic, agent offering more options"
+    },
+    {
+      "turn_number": 7,
+      "user_message": "Yes please, can I have the names of some other theater attractions?",
+      "agent_response": "Does the Cambrdige Corn Exchange theatre in the center pique  your interest?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing discussion about theatre attractions"
+    },
+    {
+      "turn_number": 8,
+      "user_message": "That sounds interesting! Can I have their address, entrance fee, and phone number?",
+      "agent_response": "we are unsure of their entrance fee but their address is wheeler street\tand phone number is 01223357851",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Getting details about the same theatre attraction"
+    },
+    {
+      "turn_number": 9,
+      "user_message": "Great that's all I needed. Thanks for your assistance.",
+      "agent_response": "Thank you for using the Cambridge TownInfo centre. Goodbye.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Concluding the attractions discussion"
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1: finding a train to London Kings Cross"
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train discussion, providing specific departure details"
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Concluding train discussion, user declines booking"
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 2: finding attractions in town center - new domain"
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing attractions discussion, specifying preferences"
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still on attractions topic, agent offering more options"
+    },
+    {
+      "turn_number": 7,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing discussion about theatre attractions"
+    },
+    {
+      "turn_number": 8,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Getting details about the same theatre attraction"
+    },
+    {
+      "turn_number": 9,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Concluding the attractions discussion"
+    }
+  ]
+}

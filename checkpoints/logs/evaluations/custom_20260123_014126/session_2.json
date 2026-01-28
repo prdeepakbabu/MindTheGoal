@@ -1,0 +1,107 @@
+{
+  "session_id": "4699876864",
+  "session_index": 2,
+  "num_turns": 6,
+  "num_goals_detected": 1,
+  "num_failures": 1,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "I'll be requesting a taxi to golden house please",
+      "agent_response": "Sure thing, when you like to leave by?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user initiates new goal of booking a taxi to golden house"
+    },
+    {
+      "turn_number": 2,
+      "user_message": "I want to arrive there by 07:00",
+      "agent_response": "You are booked! Your car is a red audi and contact number is 07727005105",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing same taxi booking goal, specifying arrival time"
+    },
+    {
+      "turn_number": 3,
+      "user_message": "Thank you that is all I need today.",
+      "agent_response": "Just to confirm - you wanted picked up at alexander bed and breakfast correct?",
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E1",
+      "reasoning": "Same taxi goal. Agent made incorrect assumption about pickup location"
+    },
+    {
+      "turn_number": 4,
+      "user_message": "no, he taxi should depart from hotel du vin and bistro",
+      "agent_response": "Alright, I'll fix it for you",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Same taxi goal. User corrects pickup location"
+    },
+    {
+      "turn_number": 5,
+      "user_message": "Thank you for your help",
+      "agent_response": "I'm sorry for the mixup. Your taxi is a white lexus. The contact number is 07770889191. Is there anything else?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Same taxi goal. Agent provides updated booking with correct details"
+    },
+    {
+      "turn_number": 6,
+      "user_message": "That's it for today. Thank you.",
+      "agent_response": "You're welcome. And I apologize again for the confusion. If I can help you with anything else in the future don't hesitate to ask.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Same taxi goal. Conversation closing with confirmation"
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user initiates new goal of booking a taxi to golden house"
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing same taxi booking goal, specifying arrival time"
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E1",
+      "reasoning": "Same taxi goal. Agent made incorrect assumption about pickup location"
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Same taxi goal. User corrects pickup location"
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Same taxi goal. Agent provides updated booking with correct details"
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Same taxi goal. Conversation closing with confirmation"
+    }
+  ]
+}

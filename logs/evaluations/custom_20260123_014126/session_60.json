@@ -1,0 +1,187 @@
+{
+  "session_id": "4419366016",
+  "session_index": 60,
+  "num_turns": 11,
+  "num_goals_detected": 3,
+  "num_failures": 1,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "I'm looking for the Cherry Hinton Hall and Grounds.",
+      "agent_response": "Great choice! The Cherry Hinton grounds are located in the east. It is located on Cherry Hinton Road. Their contact info is 01223446104. Any other information I can offer you?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about Cherry Hinton Hall attraction. This is Goal 1."
+    },
+    {
+      "turn_number": 2,
+      "user_message": "Yes, could you give me the postcode please? ",
+      "agent_response": "The postcode is cb18dw. Is there anything else you need?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about same attraction (postcode). Continues Goal 1."
+    },
+    {
+      "turn_number": 3,
+      "user_message": "I want to find a hotel in the west. It needs to have free parking.",
+      "agent_response": "There are two hotels that meet those criteria.  The Huntingdon Marriott is an expensive hotel, and the Cambridge Belfry is a cheap. Which one would you prefer?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to hotel search - this is Goal 2. Different domain."
+    },
+    {
+      "turn_number": 4,
+      "user_message": "I will try the Huntingdon Marriot. ",
+      "agent_response": "Would you like me to book you a room at the huntingdon marriott hotel?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues hotel discussion, selecting specific hotel."
+    },
+    {
+      "turn_number": 5,
+      "user_message": "Yes, I need a room starting on tuesday.",
+      "agent_response": "How many nights would you like it to be reserved, and how many will be in your party?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing hotel booking details."
+    },
+    {
+      "turn_number": 6,
+      "user_message": "I will need three nights and with 5 people.",
+      "agent_response": "I was unable to book for 5 nights.  Would you like to try for 4 nights?",
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E1",
+      "reasoning": "Agent misunderstood 3 nights as 5 nights. Language understanding error."
+    },
+    {
+      "turn_number": 7,
+      "user_message": "Actually I was mistaken, I need it to be booked for 6 people for 2 nights starting Tuesday.",
+      "agent_response": "I'm unable to book two nights for six people.  Would you like to try for one day?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues hotel booking, modifying requirements."
+    },
+    {
+      "turn_number": 8,
+      "user_message": "Yes please. One day is fine.",
+      "agent_response": "The booking was successful. The reference number is 1FN4UUGJ. What else can I help you with? ",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Completes hotel booking successfully."
+    },
+    {
+      "turn_number": 9,
+      "user_message": "I also need a taxi to get me between the two places please.",
+      "agent_response": "When would you like to leave or arrive?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to taxi booking - this is Goal 3. New transportation domain."
+    },
+    {
+      "turn_number": 10,
+      "user_message": "I'd like to leave by 16:15.",
+      "agent_response": "Okay sure. I have booked a white BMW to pick you up and your contact number is 07340002030. Anything else?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues taxi booking discussion."
+    },
+    {
+      "turn_number": 11,
+      "user_message": "That takes care of everything. Thank You!",
+      "agent_response": "Thank you for using our system!",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Closing conversation, no new goal."
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about Cherry Hinton Hall attraction. This is Goal 1."
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about same attraction (postcode). Continues Goal 1."
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to hotel search - this is Goal 2. Different domain."
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues hotel discussion, selecting specific hotel."
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing hotel booking details."
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E1",
+      "reasoning": "Agent misunderstood 3 nights as 5 nights. Language understanding error."
+    },
+    {
+      "turn_number": 7,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues hotel booking, modifying requirements."
+    },
+    {
+      "turn_number": 8,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Completes hotel booking successfully."
+    },
+    {
+      "turn_number": 9,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to taxi booking - this is Goal 3. New transportation domain."
+    },
+    {
+      "turn_number": 10,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues taxi booking discussion."
+    },
+    {
+      "turn_number": 11,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Closing conversation, no new goal."
+    }
+  ]
+}

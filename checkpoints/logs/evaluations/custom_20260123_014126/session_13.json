@@ -1,0 +1,171 @@
+{
+  "session_id": "4420193024",
+  "session_index": 13,
+  "num_turns": 10,
+  "num_goals_detected": 2,
+  "num_failures": 1,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "looking for places to go in town. The attraction should be in the north and should be in the type of mutliple sports",
+      "agent_response": "I have nothing matching what you are looking for. Perhaps another area or another attraction?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about attractions in north area. This is Goal 1."
+    },
+    {
+      "turn_number": 2,
+      "user_message": "I want to stay in the north. Are there any attractions with boats?",
+      "agent_response": "riverboat georgina has nice boats. Are you interested ?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing attractions, just modifying search criteria from sports to boats."
+    },
+    {
+      "turn_number": 3,
+      "user_message": "I would like their phone number, entrance fee, and address.",
+      "agent_response": "they are at cambridge passenger cruisers, jubilee house,cb43ax. or call them on 01223902091.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up questions about same attraction (Riverboat Georgina)."
+    },
+    {
+      "turn_number": 4,
+      "user_message": "I also need a hotel. One with free wifi and not too expensive.",
+      "agent_response": "If you want to stay in the north, the Acorn Guest House is moderately-priced and quite nice. If you want cheap, I recommend Worth House.",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to new goal (Goal 2) - looking for hotel accommodation."
+    },
+    {
+      "turn_number": 5,
+      "user_message": "Okay let's try the Acorn Guesthouse.",
+      "agent_response": "Okay. Would you like to book a room at the Acorn Guest House?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing hotel discussion, selecting specific option."
+    },
+    {
+      "turn_number": 6,
+      "user_message": "Can you book it for me and get a reference number ?",
+      "agent_response": "I would be happy to book the Acorn Guest House for you.  Can you please tell me the day, length of stay, and the number of people.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up about booking same hotel."
+    },
+    {
+      "turn_number": 7,
+      "user_message": "I actually won't need a booking. Can you tell me the star of the hotel and if they offer free parking?",
+      "agent_response": "The Acorn Guest house is a beautiful 4-star guest house. They do offer internet and parking. Would you like me to provide their contact information for future reference?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing same hotel, asking for additional details."
+    },
+    {
+      "turn_number": 8,
+      "user_message": "No, thank you. Could I get the entrance fee of the Riverboat Georgina?",
+      "agent_response": "I am sorry I do not have that information, I can give you their phone number if you would like.",
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E4",
+      "reasoning": "Returns to discussing Riverboat Georgina (part of Goal 1). Agent unable to provide entrance fee info."
+    },
+    {
+      "turn_number": 9,
+      "user_message": "Yes the phone number would be great.  What are their hours?",
+      "agent_response": "The phone number is 01223902091.  Their website is vague, I'm afraid you'll have to call them for their hours.  What else can I help you with today?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing discussion about Riverboat Georgina hours and contact info."
+    },
+    {
+      "turn_number": 10,
+      "user_message": "no that is it for now thanks",
+      "agent_response": "You're welcome. Have a good visit.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Conversation closing, no new goal."
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about attractions in north area. This is Goal 1."
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing attractions, just modifying search criteria from sports to boats."
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up questions about same attraction (Riverboat Georgina)."
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to new goal (Goal 2) - looking for hotel accommodation."
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing hotel discussion, selecting specific option."
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up about booking same hotel."
+    },
+    {
+      "turn_number": 7,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing same hotel, asking for additional details."
+    },
+    {
+      "turn_number": 8,
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E4",
+      "reasoning": "Returns to discussing Riverboat Georgina (part of Goal 1). Agent unable to provide entrance fee info."
+    },
+    {
+      "turn_number": 9,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing discussion about Riverboat Georgina hours and contact info."
+    },
+    {
+      "turn_number": 10,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Conversation closing, no new goal."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "session_id": "4700066816",
+  "session_index": 26,
+  "num_turns": 3,
+  "num_goals_detected": 1,
+  "num_failures": 0,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "I want a restaurant in the town centre. Can you help me?",
+      "agent_response": "We have 69 restaurants available.  Could you specify type or price range please?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn initiates Goal 1 - finding a restaurant in town centre. Agent appropriately asks for more specifics."
+    },
+    {
+      "turn_number": 2,
+      "user_message": "I'm looking for a moderately priced restaurant. I'm looking to book for just myself at 14:00 on Friday.",
+      "agent_response": "Okay I took the liberty of booking you into the Oak Bistro that serves traditional British food. Your reference number is BA2MQ3EB.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues same restaurant goal, providing requested details. Agent successfully books the restaurant."
+    },
+    {
+      "turn_number": 3,
+      "user_message": "That sounds perfect. Thanks for your help!",
+      "agent_response": "Have a wonderful day!",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Simple confirmation/thanks for same restaurant booking goal. No new topic/goal introduced."
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn initiates Goal 1 - finding a restaurant in town centre. Agent appropriately asks for more specifics."
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues same restaurant goal, providing requested details. Agent successfully books the restaurant."
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Simple confirmation/thanks for same restaurant booking goal. No new topic/goal introduced."
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "session_id": "4705736512",
+  "session_index": 39,
+  "num_turns": 6,
+  "num_goals_detected": 2,
+  "num_failures": 0,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "Can you find specific attractions for people?",
+      "agent_response": "I can try.  What are you trying to find?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn initiates Goal 1 - user asks about finding attractions, specifically for people"
+    },
+    {
+      "turn_number": 2,
+      "user_message": "I am looking for people's portraits exhibition.",
+      "agent_response": "Yes, it's a lovely museum in the west at girton college, huntingdon road. Their phone number is 01223338901 and they offer free entrance. May I help with anything else?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues Goal 1 - specifying interest in portraits exhibition. Agent provides museum details"
+    },
+    {
+      "turn_number": 3,
+      "user_message": "can you give me the post code for it?",
+      "agent_response": "The post code is cb3ojg. May I help with anything else?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still part of Goal 1 - asking for additional detail (postcode) about same museum"
+    },
+    {
+      "turn_number": 4,
+      "user_message": "Yes, I would also like to find a restaurant called Golden House please.",
+      "agent_response": "They're located in the centre. Would you like a reservation? ",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Starts Goal 2 - user switches to new topic, asking about Golden House restaurant"
+    },
+    {
+      "turn_number": 5,
+      "user_message": "Yes, how about a table for 8 on saturday. Try 19:30, if that doesn't work then try 18:30.",
+      "agent_response": "I was able to book you at 18:30 on Saturday. Reference number 3C5H16N9. Is there anything else I can help you with?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues Goal 2 - making reservation at the same restaurant"
+    },
+    {
+      "turn_number": 6,
+      "user_message": "That is all, thank you.",
+      "agent_response": "Thank you very much! Have a great day",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Concludes conversation, no new goal"
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn initiates Goal 1 - user asks about finding attractions, specifically for people"
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues Goal 1 - specifying interest in portraits exhibition. Agent provides museum details"
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still part of Goal 1 - asking for additional detail (postcode) about same museum"
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Starts Goal 2 - user switches to new topic, asking about Golden House restaurant"
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues Goal 2 - making reservation at the same restaurant"
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Concludes conversation, no new goal"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "session_id": "4416585280",
+  "session_index": 88,
+  "num_turns": 5,
+  "num_goals_detected": 2,
+  "num_failures": 0,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "I need a train departing Cambridge and I need it to arrive by 21:00",
+      "agent_response": "Where are you headed to? And what day are you traveling? ",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1: booking a train to arrive by 21:00. Agent appropriately asks for missing details."
+    },
+    {
+      "turn_number": 2,
+      "user_message": "Looking to go to Stansted Airport on Sunday",
+      "agent_response": "I have TR5009 leaving at 18:40 and arriving by 19:08.  Would you like me to book this for you?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train booking goal - user provides requested destination/date. Agent finds suitable train."
+    },
+    {
+      "turn_number": 3,
+      "user_message": "book for one person please. ",
+      "agent_response": "I was able to book that ticket for you. Your reference number is 642J5XG0. Is there anything else I can do for you today? ",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still same train booking goal - user confirms booking for one person. Agent successfully books ticket."
+    },
+    {
+      "turn_number": 4,
+      "user_message": "Can you give me information about the riverboat georgina?",
+      "agent_response": "The riverboat georgina is currently docked on the Northend at Cambridge Passenger Cruisers, Jubilee House, postcode cb43ax. Their phone is: 01223902091. I have no info on their entrance fee. Anything ...",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 2: asking about riverboat Georgina (new attraction/topic). Agent provides location and contact details."
+    },
+    {
+      "turn_number": 5,
+      "user_message": "No, thanks. You answered all my questions. Thanks so much. Have a good day. Goodbye.",
+      "agent_response": "Have a good day.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Closing conversation, no new goal. Just thanking and goodbye."
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1: booking a train to arrive by 21:00. Agent appropriately asks for missing details."
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train booking goal - user provides requested destination/date. Agent finds suitable train."
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still same train booking goal - user confirms booking for one person. Agent successfully books ticket."
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 2: asking about riverboat Georgina (new attraction/topic). Agent provides location and contact details."
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Closing conversation, no new goal. Just thanking and goodbye."
+    }
+  ]
+}

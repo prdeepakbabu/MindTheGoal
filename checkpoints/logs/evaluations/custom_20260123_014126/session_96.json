@@ -1,0 +1,59 @@
+{
+  "session_id": "4427072256",
+  "session_index": 96,
+  "num_turns": 3,
+  "num_goals_detected": 1,
+  "num_failures": 0,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "Are there any expensive places to eat in the east?",
+      "agent_response": "Grafton hotel restaurant serves british food in the expensive price range in the east part of town.",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1 looking for expensive restaurants in east"
+    },
+    {
+      "turn_number": 2,
+      "user_message": "I was really looking for a kosher cuisine? Is that available there? If so can you book a table for four?",
+      "agent_response": "There are no restaurants in the east that serve kosher food. Would you like me to search another area?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues same restaurant search goal, just adding kosher constraint. Agent appropriately indicates no options available."
+    },
+    {
+      "turn_number": 3,
+      "user_message": "Are there any restaurants that serve Indian food?",
+      "agent_response": "I can book you a table for 4 at the pipasha restaurant.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still part of restaurant search goal, user just modifies cuisine preference to Indian after learning no kosher options exist"
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1 looking for expensive restaurants in east"
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues same restaurant search goal, just adding kosher constraint. Agent appropriately indicates no options available."
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still part of restaurant search goal, user just modifies cuisine preference to Indian after learning no kosher options exist"
+    }
+  ]
+}

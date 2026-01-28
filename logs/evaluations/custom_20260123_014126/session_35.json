@@ -1,0 +1,107 @@
+{
+  "session_id": "4420670144",
+  "session_index": 35,
+  "num_turns": 6,
+  "num_goals_detected": 2,
+  "num_failures": 0,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "I'm looking for places to go in the centre of Cambridge.  ",
+      "agent_response": "There are 44 different things to do in the centre of Cambridge.  Can you help me narrow it down by type of activity or attraction?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about attractions in Cambridge centre. This is Goal 1."
+    },
+    {
+      "turn_number": 2,
+      "user_message": "What's the postcode for your favorite one?",
+      "agent_response": "My personal favorite is holy trinity church. They are on market st and the postcode is cb23nz. Anything else I can help you with today?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about postcode for an attraction (same goal). Agent provides specific info about Holy Trinity Church."
+    },
+    {
+      "turn_number": 3,
+      "user_message": "I also need to book a train.",
+      "agent_response": "i have plenty of trains, can i get more information please?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User explicitly starts new goal with 'I also need to book a train' - This is Goal 2. Clear switch to train domain."
+    },
+    {
+      "turn_number": 4,
+      "user_message": "I need to leave on sunday after 12:30 from cambridge to stevenage",
+      "agent_response": "The first train after 12:30 is the TR0523, which leaves Cambridge at 13:21.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train booking goal - providing specific requirements for the journey."
+    },
+    {
+      "turn_number": 5,
+      "user_message": "Great, can I get two tickets on it, please?",
+      "agent_response": "I've booked two tickets for the TR0523 train, and your reference number is R6GCVVA0. Can I help you with anything else today? ",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still part of train booking goal - completing the ticket purchase."
+    },
+    {
+      "turn_number": 6,
+      "user_message": "No, thank you. You've been very helpful! Goodbye.",
+      "agent_response": "Thank you for contacting Cambridge TownInfo centre.  I hope you have a pleasant trip!  Goodbye!",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Conversation closing - no new goal, just farewell exchange."
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about attractions in Cambridge centre. This is Goal 1."
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about postcode for an attraction (same goal). Agent provides specific info about Holy Trinity Church."
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User explicitly starts new goal with 'I also need to book a train' - This is Goal 2. Clear switch to train domain."
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train booking goal - providing specific requirements for the journey."
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still part of train booking goal - completing the ticket purchase."
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Conversation closing - no new goal, just farewell exchange."
+    }
+  ]
+}

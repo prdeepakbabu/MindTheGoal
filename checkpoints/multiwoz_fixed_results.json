@@ -1,0 +1,179 @@
+{
+  "evaluation_id": "162470ce-ed11-41f4-afe6-d34a056f352a",
+  "dataset_name": "custom",
+  "total_sessions": 10,
+  "total_goals": 15,
+  "total_turns": 59,
+  "overall_gsr": 73.33333333333333,
+  "single_turn_gsr": 0.0,
+  "multi_turn_gsr": 73.33333333333333,
+  "rcof_distribution": {
+    "E3": 1,
+    "E1": 2,
+    "E4": 1
+  },
+  "domain_gsr": {},
+  "evaluated_at": "2026-01-23T09:32:43.025167",
+  "session_details": [
+    {
+      "session_id": "4476713536",
+      "num_turns": 5,
+      "num_goals": 1,
+      "goals": [
+        {
+          "goal_number": 1,
+          "num_turns": 5,
+          "quality": "success",
+          "rcof": null
+        }
+      ]
+    },
+    {
+      "session_id": "4471817216",
+      "num_turns": 8,
+      "num_goals": 2,
+      "goals": [
+        {
+          "goal_number": 1,
+          "num_turns": 2,
+          "quality": "success",
+          "rcof": null
+        },
+        {
+          "goal_number": 2,
+          "num_turns": 6,
+          "quality": "failure",
+          "rcof": "E3"
+        }
+      ]
+    },
+    {
+      "session_id": "4486249280",
+      "num_turns": 6,
+      "num_goals": 1,
+      "goals": [
+        {
+          "goal_number": 1,
+          "num_turns": 6,
+          "quality": "failure",
+          "rcof": "E1"
+        }
+      ]
+    },
+    {
+      "session_id": "4484480704",
+      "num_turns": 8,
+      "num_goals": 2,
+      "goals": [
+        {
+          "goal_number": 1,
+          "num_turns": 3,
+          "quality": "success",
+          "rcof": null
+        },
+        {
+          "goal_number": 2,
+          "num_turns": 5,
+          "quality": "failure",
+          "rcof": "E4"
+        }
+      ]
+    },
+    {
+      "session_id": "4483201408",
+      "num_turns": 4,
+      "num_goals": 1,
+      "goals": [
+        {
+          "goal_number": 1,
+          "num_turns": 4,
+          "quality": "success",
+          "rcof": null
+        }
+      ]
+    },
+    {
+      "session_id": "4478411200",
+      "num_turns": 9,
+      "num_goals": 2,
+      "goals": [
+        {
+          "goal_number": 1,
+          "num_turns": 3,
+          "quality": "success",
+          "rcof": null
+        },
+        {
+          "goal_number": 2,
+          "num_turns": 6,
+          "quality": "success",
+          "rcof": null
+        }
+      ]
+    },
+    {
+      "session_id": "4476203136",
+      "num_turns": 3,
+      "num_goals": 1,
+      "goals": [
+        {
+          "goal_number": 1,
+          "num_turns": 3,
+          "quality": "success",
+          "rcof": null
+        }
+      ]
+    },
+    {
+      "session_id": "4501939840",
+      "num_turns": 6,
+      "num_goals": 2,
+      "goals": [
+        {
+          "goal_number": 1,
+          "num_turns": 2,
+          "quality": "success",
+          "rcof": null
+        },
+        {
+          "goal_number": 2,
+          "num_turns": 4,
+          "quality": "success",
+          "rcof": null
+        }
+      ]
+    },
+    {
+      "session_id": "4475302976",
+      "num_turns": 3,
+      "num_goals": 1,
+      "goals": [
+        {
+          "goal_number": 1,
+          "num_turns": 3,
+          "quality": "failure",
+          "rcof": "E1"
+        }
+      ]
+    },
+    {
+      "session_id": "4504649792",
+      "num_turns": 7,
+      "num_goals": 2,
+      "goals": [
+        {
+          "goal_number": 1,
+          "num_turns": 3,
+          "quality": "success",
+          "rcof": null
+        },
+        {
+          "goal_number": 2,
+          "num_turns": 4,
+          "quality": "success",
+          "rcof": null
+        }
+      ]
+    }
+  ]
+}

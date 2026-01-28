@@ -1,0 +1,43 @@
+{
+  "session_id": "sample_002",
+  "session_index": null,
+  "num_turns": 2,
+  "num_goals_detected": 1,
+  "num_failures": 0,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "I need a taxi to take me from the hotel to the restaurant.",
+      "agent_response": "I can help with that. What time would you like to be picked up?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user initiates new goal of booking a taxi from hotel to restaurant. Agent appropriately asks for timing details."
+    },
+    {
+      "turn_number": 2,
+      "user_message": "Around 6:30pm please.",
+      "agent_response": "I've booked a taxi for 6:30pm. The car is a blue Honda and the contact number is 07845234567.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuation of taxi booking goal. User provides requested time and agent successfully completes booking with car details and contact number."
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user initiates new goal of booking a taxi from hotel to restaurant. Agent appropriately asks for timing details."
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuation of taxi booking goal. User provides requested time and agent successfully completes booking with car details and contact number."
+    }
+  ]
+}

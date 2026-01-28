@@ -1,0 +1,155 @@
+{
+  "session_id": "4424073664",
+  "session_index": 28,
+  "num_turns": 9,
+  "num_goals_detected": 2,
+  "num_failures": 1,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "Need a train leaving on Thursday after 14:30",
+      "agent_response": "I found 195 trains that match your prerequisites. What is your destination? ",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1: finding a train. Agent asks appropriate follow-up."
+    },
+    {
+      "turn_number": 2,
+      "user_message": "I am going to London Liverpool Street from Cambridge.",
+      "agent_response": "Train TR3237 arrives at 17:27 and cost 16.60 pounds. Would you like me to book it?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train discussion (Goal 1). Agent provides specific train option."
+    },
+    {
+      "turn_number": 3,
+      "user_message": "No thanks, I'm not sure how many seats I'll be needing yet. ",
+      "agent_response": "Okay. Just call us back when you do.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing train booking (Goal 1). User declines booking, agent acknowledges."
+    },
+    {
+      "turn_number": 4,
+      "user_message": "Oh, I am also looking for an African restaurant in the centre...North African, to be exact.",
+      "agent_response": "There aren't any in that particular area, do you have any alternative preferences?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 2: finding African restaurant. Clear topic switch with 'I am also looking for...'"
+    },
+    {
+      "turn_number": 5,
+      "user_message": "Hmm, can you see if there might be an expensive restaurant that serves specifically \"north african\" food in the centre of town? ",
+      "agent_response": "I apologize, but we are don't have any North African restaurants in this town at all. I do have an expensive African restaurant in the centre. Will that suffice?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing African restaurant (Goal 2). User refines search criteria."
+    },
+    {
+      "turn_number": 6,
+      "user_message": "No, if I can't get North African I'd really prefer something radically different. Chinese, maybe?",
+      "agent_response": "How about the Ugly Duckling? They serve chinese food and are located in the centre of the city.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Same restaurant goal, user adjusts preferences to Chinese. Agent suggests Ugly Duckling."
+    },
+    {
+      "turn_number": 7,
+      "user_message": "Okay. can you book me a table for 7 at 11:00 for Thursday?",
+      "agent_response": "That booking was unsuccessful. Would you like to try another time?",
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E4",
+      "reasoning": "Same restaurant goal. Booking attempt fails - agent unable to secure requested time."
+    },
+    {
+      "turn_number": 8,
+      "user_message": "Sure, can we try for 10:00 instead?",
+      "agent_response": "Booking for 10:00 was successful. Your reference number is XVUUCPBH. Is there anything else I can help with? ",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Same restaurant goal. Alternative time booking succeeds."
+    },
+    {
+      "turn_number": 9,
+      "user_message": "That will be all, thank you very much.",
+      "agent_response": "You're welcome. Have a great day!",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Conversation closing, no new goal. Agent provides appropriate farewell."
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1: finding a train. Agent asks appropriate follow-up."
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train discussion (Goal 1). Agent provides specific train option."
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing train booking (Goal 1). User declines booking, agent acknowledges."
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 2: finding African restaurant. Clear topic switch with 'I am also looking for...'"
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing African restaurant (Goal 2). User refines search criteria."
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Same restaurant goal, user adjusts preferences to Chinese. Agent suggests Ugly Duckling."
+    },
+    {
+      "turn_number": 7,
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E4",
+      "reasoning": "Same restaurant goal. Booking attempt fails - agent unable to secure requested time."
+    },
+    {
+      "turn_number": 8,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Same restaurant goal. Alternative time booking succeeds."
+    },
+    {
+      "turn_number": 9,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Conversation closing, no new goal. Agent provides appropriate farewell."
+    }
+  ]
+}

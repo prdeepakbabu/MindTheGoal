@@ -1,0 +1,28 @@
+{
+  "evaluation_id": "2edbd9b2-c7d5-439e-a13a-6f0a2ad9ff90",
+  "dataset_name": "multiwoz",
+  "total_sessions": 1,
+  "total_goals": 1,
+  "total_turns": 2,
+  "overall_gsr": 100.0,
+  "single_turn_gsr": 0.0,
+  "multi_turn_gsr": 100.0,
+  "rcof_distribution": {},
+  "domain_gsr": {},
+  "evaluated_at": "2026-01-23T17:42:21.512291",
+  "session_details": [
+    {
+      "session_id": "sample_002",
+      "num_turns": 2,
+      "num_goals": 1,
+      "goals": [
+        {
+          "goal_number": 1,
+          "num_turns": 2,
+          "quality": "success",
+          "rcof": null
+        }
+      ]
+    }
+  ]
+}

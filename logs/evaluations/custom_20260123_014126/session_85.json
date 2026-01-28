@@ -1,0 +1,107 @@
+{
+  "session_id": "4702729472",
+  "session_index": 85,
+  "num_turns": 6,
+  "num_goals_detected": 1,
+  "num_failures": 1,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "Yes, I need a hotel in the moderate price range please.",
+      "agent_response": "Would you like a hotel in the north or the centre?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1: finding a moderate-priced hotel. Agent asks relevant clarifying question."
+    },
+    {
+      "turn_number": 2,
+      "user_message": "The north.  But I do need an actual hotel, no guestrooms.  ",
+      "agent_response": "I have two hotels available that meet that criteria.  Would you like more information? ",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues same hotel search goal, adding constraint about no guestrooms. Agent identifies matching options."
+    },
+    {
+      "turn_number": 3,
+      "user_message": "Yes, tell me about those.",
+      "agent_response": "Ashley hotel is 2 stars with free internet and free parking lot. ",
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E4",
+      "reasoning": "Same hotel goal. Agent only provides info about one hotel when user asked about both options."
+    },
+    {
+      "turn_number": 4,
+      "user_message": "What about the other hotel?",
+      "agent_response": "Lovell Lodge is also two stars.  In the moderate price range, located in the North, at 365 milton road. It has free parking and wifi. ",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Same hotel goal - user asks about second hotel option. Agent provides complete information."
+    },
+    {
+      "turn_number": 5,
+      "user_message": "Could you book me a room at one of those? I need it for 6 people and 2 nights starting from saturday.",
+      "agent_response": "I was able to book you at the Ashley Hotel at 74 chesterton road.  Your Reference number is : PM69RLXB Do you need anything else?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Same hotel goal - user moves to booking phase. Agent successfully books room with reference number."
+    },
+    {
+      "turn_number": 6,
+      "user_message": "Thank you so much. That is all I need.",
+      "agent_response": "Enjoy your stay.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Concluding same hotel booking goal. Agent provides appropriate closing."
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1: finding a moderate-priced hotel. Agent asks relevant clarifying question."
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues same hotel search goal, adding constraint about no guestrooms. Agent identifies matching options."
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E4",
+      "reasoning": "Same hotel goal. Agent only provides info about one hotel when user asked about both options."
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Same hotel goal - user asks about second hotel option. Agent provides complete information."
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Same hotel goal - user moves to booking phase. Agent successfully books room with reference number."
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Concluding same hotel booking goal. Agent provides appropriate closing."
+    }
+  ]
+}

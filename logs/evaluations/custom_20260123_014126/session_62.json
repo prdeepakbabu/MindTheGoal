@@ -1,0 +1,91 @@
+{
+  "session_id": "4420603328",
+  "session_index": 62,
+  "num_turns": 5,
+  "num_goals_detected": 1,
+  "num_failures": 1,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "Are there any Chinese restaurants in the centre part of town?",
+      "agent_response": "jinling noodle bar is in the centre abd serves chinese food",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1 asking about Chinese restaurants in centre"
+    },
+    {
+      "turn_number": 2,
+      "user_message": "Are they expensive?",
+      "agent_response": "They are in the moderate price range.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about price range of same restaurant"
+    },
+    {
+      "turn_number": 3,
+      "user_message": "Please look for something else in the expensive price range. I will need the address, post code and phone number.",
+      "agent_response": "Does the Jinling Noodle Bar sound like a good choice?",
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E1",
+      "reasoning": "Same restaurant goal - user asks for expensive alternatives but agent misunderstands and suggests same moderate restaurant again"
+    },
+    {
+      "turn_number": 4,
+      "user_message": "Sure! What's the address, postcode, and phone number of it?",
+      "agent_response": "their address is 11 Peas Hill City Centre, postcode is cb23pp , and phone number is 01223566188\n",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still same restaurant goal - user accepts suggestion and asks for contact details"
+    },
+    {
+      "turn_number": 5,
+      "user_message": "thank you for your help",
+      "agent_response": "Thank you goodbye",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Closing pleasantries for same restaurant booking goal"
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1 asking about Chinese restaurants in centre"
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about price range of same restaurant"
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E1",
+      "reasoning": "Same restaurant goal - user asks for expensive alternatives but agent misunderstands and suggests same moderate restaurant again"
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still same restaurant goal - user accepts suggestion and asks for contact details"
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Closing pleasantries for same restaurant booking goal"
+    }
+  ]
+}

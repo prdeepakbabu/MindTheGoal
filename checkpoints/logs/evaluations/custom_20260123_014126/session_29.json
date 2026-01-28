@@ -1,0 +1,139 @@
+{
+  "session_id": "4709586048",
+  "session_index": 29,
+  "num_turns": 8,
+  "num_goals_detected": 3,
+  "num_failures": 2,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "I am looking for a place to go in town. Preferably a park that is in the east. ",
+      "agent_response": "Cherry Hinton Water Play is in the east side. Anything else I can do for you?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about parks in the east. This is Goal 1 (attractions)."
+    },
+    {
+      "turn_number": 2,
+      "user_message": "Yes. Please get me their address, phone number and their entrance fee.",
+      "agent_response": "The park is located at Cherry hinton Hall, Cherry Hinton Road. The phone number is 01223446100 and is free to enter. Is there anything else I can do for you?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about same park (address, phone, fee). Continues Goal 1."
+    },
+    {
+      "turn_number": 3,
+      "user_message": "Yes, I'm also looking for an expensive restaurant that serves Jamaican food. ",
+      "agent_response": "I'm sorry, but there are no Jamaican restaurants anywhere in Cambridge. We do have plenty of expensive restaurants, though, so I could find you a different cuisine.",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to restaurant search (Goal 2). Clear new domain/intent with 'I'm also looking for'"
+    },
+    {
+      "turn_number": 4,
+      "user_message": "That is fine, how about a restaurant that serves Asian oriental food?",
+      "agent_response": "There are two expensive Asian oriental restaurants in Cambridge, one in the north and the other in the centre. Which would you prefer?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues restaurant search (Goal 2) by modifying cuisine preference"
+    },
+    {
+      "turn_number": 5,
+      "user_message": "Let's try the one in the north. I'd like to book a table for 4 at 19:00 on Wednesday, please.",
+      "agent_response": "I'm sorry, there were no more tables available. Would you like to try the other restaurant, or a different time?",
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E4",
+      "reasoning": "Same restaurant goal. Failed to find available booking."
+    },
+    {
+      "turn_number": 6,
+      "user_message": "I would like to try the other oriental restaurant for the same time 19:00 for party of 4. ",
+      "agent_response": "I'm very sorry, neither of these restaurants have availability at that time on Wednesday.  Would you like to try another time/day?",
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E4",
+      "reasoning": "Still trying to book same restaurant. Failed again to find availability."
+    },
+    {
+      "turn_number": 7,
+      "user_message": "Can any of them do a time at 18:00? I'll also need a taxi to travel inbetween two locations. ",
+      "agent_response": "Your booking for Kymmoy restaurant was successful and your reference number is 5IFCHKNS. The information for you taxi is a Grey Tesla and its contact number is 07674543654.",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User introduces taxi request ('I'll also need a taxi') - This is Goal 3. Successfully books both restaurant and taxi."
+    },
+    {
+      "turn_number": 8,
+      "user_message": "Wonderful. Thanks for your help. That's all I needed.",
+      "agent_response": "You're welcome. Have a great time!",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Closing pleasantries, no new goal. Agent acknowledges successfully."
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about parks in the east. This is Goal 1 (attractions)."
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about same park (address, phone, fee). Continues Goal 1."
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to restaurant search (Goal 2). Clear new domain/intent with 'I'm also looking for'"
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues restaurant search (Goal 2) by modifying cuisine preference"
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E4",
+      "reasoning": "Same restaurant goal. Failed to find available booking."
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E4",
+      "reasoning": "Still trying to book same restaurant. Failed again to find availability."
+    },
+    {
+      "turn_number": 7,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User introduces taxi request ('I'll also need a taxi') - This is Goal 3. Successfully books both restaurant and taxi."
+    },
+    {
+      "turn_number": 8,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Closing pleasantries, no new goal. Agent acknowledges successfully."
+    }
+  ]
+}

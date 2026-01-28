@@ -1,0 +1,107 @@
+{
+  "session_id": "4427999488",
+  "session_index": 87,
+  "num_turns": 6,
+  "num_goals_detected": 2,
+  "num_failures": 0,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "Hello, I'd like some information about a hotel called the hamilton lodge, please.",
+      "agent_response": "The Hamilton Lodge is a 3 star guesthouse located at 156 Chesterton Road. Would you like to make a reservation?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about Hamilton Lodge hotel. This is Goal 1."
+    },
+    {
+      "turn_number": 2,
+      "user_message": "Not today I was just looking for information. Thank you though for your help.",
+      "agent_response": "Is that all you need for today?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing Hamilton Lodge hotel (same goal). User declines booking."
+    },
+    {
+      "turn_number": 3,
+      "user_message": "I am also looking for a train leaving from Cambridge anytime after 17:00. Can you help me with that?",
+      "agent_response": "Certainly, what day would you like to leave, and where would you like to go?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to train booking ('I am also looking for...') - this is Goal 2. Different domain."
+    },
+    {
+      "turn_number": 4,
+      "user_message": "I need the train to leave Cambridge after 17:00 on Wednesday heading to Kings Lynn.",
+      "agent_response": "Great. I have 7 trains that meet your criteria. The first one leaves at 17:11 and is every hour thereafter. Would you like me to book one for you?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train discussion (same goal). User provides departure details."
+    },
+    {
+      "turn_number": 5,
+      "user_message": "What is the cost and trainID for the 17:11 train?",
+      "agent_response": "The cost is 9.80 pounds, and the train ID is TR8627. Would you like me to book it for you?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing train booking (same goal). User asks for specific train details."
+    },
+    {
+      "turn_number": 6,
+      "user_message": "No thank you, I'll take care of it myself. I think that'll be all for tonight.",
+      "agent_response": "Thank you for using our service.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Concluding train discussion (same goal). User declines booking and ends conversation."
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about Hamilton Lodge hotel. This is Goal 1."
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing Hamilton Lodge hotel (same goal). User declines booking."
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to train booking ('I am also looking for...') - this is Goal 2. Different domain."
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train discussion (same goal). User provides departure details."
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing train booking (same goal). User asks for specific train details."
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Concluding train discussion (same goal). User declines booking and ends conversation."
+    }
+  ]
+}

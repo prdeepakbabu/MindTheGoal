@@ -1,0 +1,59 @@
+{
+  "session_id": "sample_004",
+  "session_index": null,
+  "num_turns": 3,
+  "num_goals_detected": 1,
+  "num_failures": 0,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "I want to visit some attractions in Cambridge.",
+      "agent_response": "Cambridge has many attractions. What type are you interested in - museums, churches, parks?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user initiates Goal 1 about visiting attractions in Cambridge. Agent appropriately asks for preferences."
+    },
+    {
+      "turn_number": 2,
+      "user_message": "I'd like to see some museums.",
+      "agent_response": "The Fitzwilliam Museum is highly recommended. It's free to enter and has an excellent art collection.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues same goal about attractions, specifying museums. Agent provides relevant recommendation."
+    },
+    {
+      "turn_number": 3,
+      "user_message": "What are the opening hours?",
+      "agent_response": "The Fitzwilliam Museum is open Tuesday to Saturday from 10am to 5pm, and Sunday from 12pm to 5pm.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about opening hours for the same museum. Same attraction goal continues."
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user initiates Goal 1 about visiting attractions in Cambridge. Agent appropriately asks for preferences."
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues same goal about attractions, specifying museums. Agent provides relevant recommendation."
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about opening hours for the same museum. Same attraction goal continues."
+    }
+  ]
+}

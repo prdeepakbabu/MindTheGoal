@@ -1,0 +1,139 @@
+{
+  "session_id": "4418772480",
+  "session_index": 56,
+  "num_turns": 8,
+  "num_goals_detected": 3,
+  "num_failures": 0,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "I'm looking for places to go in town. Can you search in the area of south?",
+      "agent_response": "We have several great options. The Byard Art museum is popular and has free admission. ",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about attractions in south area. This is Goal 1 (attractions)."
+    },
+    {
+      "turn_number": 2,
+      "user_message": "That sounds lovely. What's their phone number?",
+      "agent_response": "Oh they really are lovely. And the number is \t01223464646.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about same attraction (phone number). Continues Goal 1."
+    },
+    {
+      "turn_number": 3,
+      "user_message": "Thank you. I am also looking for an expensive Italian restaurant.",
+      "agent_response": "Sure, there are 5 expensive Italian restaurants for you to choose from. Is that a specific area you would like the restaurant to be in?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to restaurant search ('I am also looking for'). This starts Goal 2 (restaurant)."
+    },
+    {
+      "turn_number": 4,
+      "user_message": "I'd like one near the museum in the south.",
+      "agent_response": "We only have one listing for an Italian restaurant in the south.  It's located at Cambridge Leisure Park Clifton Way Cherry Hinton.  Does this interest you?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues restaurant discussion, specifying location preference. Part of Goal 2."
+    },
+    {
+      "turn_number": 5,
+      "user_message": "Yes.  I need a table for 8 at 11:00 on Tuesday.",
+      "agent_response": "I was able to book the table for eight on Tuesday 11:00.  The reference number is  R8O6B9DF.  The table will be reserved for 15 minutes.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Making restaurant booking - still part of Goal 2."
+    },
+    {
+      "turn_number": 6,
+      "user_message": "Thank you, can I also get a taxi between the two places? ",
+      "agent_response": "Absolutely! When would you like to arrive at or leave by?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to taxi booking ('can I also get a taxi'). This starts Goal 3 (transport)."
+    },
+    {
+      "turn_number": 7,
+      "user_message": "I'd like to get to the restaurant by my reservation time.",
+      "agent_response": "I was able to book a black honda contact number is 07790378961",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues taxi booking discussion. Part of Goal 3."
+    },
+    {
+      "turn_number": 8,
+      "user_message": "Thank you so much. You took care of everything. Thanks. Bye. ",
+      "agent_response": "Thank you for using our service. Have a great day! Goodbye. ",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Closing pleasantries, no new goal."
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about attractions in south area. This is Goal 1 (attractions)."
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about same attraction (phone number). Continues Goal 1."
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to restaurant search ('I am also looking for'). This starts Goal 2 (restaurant)."
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues restaurant discussion, specifying location preference. Part of Goal 2."
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Making restaurant booking - still part of Goal 2."
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to taxi booking ('can I also get a taxi'). This starts Goal 3 (transport)."
+    },
+    {
+      "turn_number": 7,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues taxi booking discussion. Part of Goal 3."
+    },
+    {
+      "turn_number": 8,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Closing pleasantries, no new goal."
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "session_id": "4421152000",
+  "session_index": 0,
+  "num_turns": 5,
+  "num_goals_detected": 1,
+  "num_failures": 0,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "I am looking for a restaurant that is expensive and in the west",
+      "agent_response": "There are 9 matching restaurants. What food would you like?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1 of finding an expensive British restaurant in west"
+    },
+    {
+      "turn_number": 2,
+      "user_message": "I would really like to try some British food please.",
+      "agent_response": "I have 2 matching restaurants.  Would you like more details on them?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing same restaurant search goal, specifying British food preference"
+    },
+    {
+      "turn_number": 3,
+      "user_message": "No, if you could just book me into one for saturday, that would be great.",
+      "agent_response": "Ok, how many people and what is the time preference?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still same restaurant goal, moving to booking phase"
+    },
+    {
+      "turn_number": 4,
+      "user_message": "I need if for four, 13:30, Saturday. ",
+      "agent_response": "Sure, you're booked at Travellers Rest with reference number A5LK844G. May I help with anything else?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Completing restaurant booking with specific details"
+    },
+    {
+      "turn_number": 5,
+      "user_message": "Okay great no that will be it.",
+      "agent_response": "Okay. Glad I could be of help. Please call again.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Concluding the restaurant booking goal"
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1 of finding an expensive British restaurant in west"
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing same restaurant search goal, specifying British food preference"
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still same restaurant goal, moving to booking phase"
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Completing restaurant booking with specific details"
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Concluding the restaurant booking goal"
+    }
+  ]
+}

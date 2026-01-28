@@ -1,0 +1,139 @@
+{
+  "session_id": "4719979904",
+  "session_index": 17,
+  "num_turns": 8,
+  "num_goals_detected": 2,
+  "num_failures": 2,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "I need a place to stay in the north with a 4 star rating please. ",
+      "agent_response": "I have 8 guesthouses in the north.  Would you like some information on the Archway House? It has free parking and internet.",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1: finding accommodation in north with 4 stars. Agent provides relevant option."
+    },
+    {
+      "turn_number": 2,
+      "user_message": "Is it in the cheap price range?",
+      "agent_response": "No, it's moderately priced would you like another hotel?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about price for same hotel (Goal 1). Agent answers correctly."
+    },
+    {
+      "turn_number": 3,
+      "user_message": "What hotels have free parking?",
+      "agent_response": "I have the archway house that offers free parking. Would you like to make reservations?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing hotels with parking (Goal 1). Agent provides information."
+    },
+    {
+      "turn_number": 4,
+      "user_message": "No thank you, could I have the address with postcode and phone number?",
+      "agent_response": "The address is 52 gilbert road cb43pe, phone number 01223575314. Is there anything else you need today?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Requesting contact details for same hotel (Goal 1). Agent provides complete info."
+    },
+    {
+      "turn_number": 5,
+      "user_message": "I would like to find a boat in the north of town as well. ",
+      "agent_response": "There is the Riverboat Georgina in the north.  Would you like the information for it?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 2: finding a boat attraction ('as well' indicates new goal). Agent provides option."
+    },
+    {
+      "turn_number": 6,
+      "user_message": "Can you just give me the entrance fee amount and the address?",
+      "agent_response": "The address is cambridge passenger cruisers, jubilee house. The entrance fee is unlisted. Anything else today?",
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E4",
+      "reasoning": "Follow-up about boat details (Goal 2). Agent fails to provide entrance fee."
+    },
+    {
+      "turn_number": 7,
+      "user_message": "There is no entrance fee?",
+      "agent_response": "The entrance fee is not available. It is absent from my database.",
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E4",
+      "reasoning": "Still discussing boat fee (Goal 2). Agent admits missing information."
+    },
+    {
+      "turn_number": 8,
+      "user_message": "Okay, thank you so much! I don't need anything else then, goodbye!",
+      "agent_response": "Thank you so much for using our services.  Goodbye.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Conversation closing. Agent responds appropriately."
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1: finding accommodation in north with 4 stars. Agent provides relevant option."
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about price for same hotel (Goal 1). Agent answers correctly."
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing hotels with parking (Goal 1). Agent provides information."
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Requesting contact details for same hotel (Goal 1). Agent provides complete info."
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 2: finding a boat attraction ('as well' indicates new goal). Agent provides option."
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E4",
+      "reasoning": "Follow-up about boat details (Goal 2). Agent fails to provide entrance fee."
+    },
+    {
+      "turn_number": 7,
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E4",
+      "reasoning": "Still discussing boat fee (Goal 2). Agent admits missing information."
+    },
+    {
+      "turn_number": 8,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Conversation closing. Agent responds appropriately."
+    }
+  ]
+}

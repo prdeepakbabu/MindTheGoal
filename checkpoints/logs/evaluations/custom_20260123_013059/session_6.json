@@ -1,0 +1,59 @@
+{
+  "session_id": "4476203136",
+  "session_index": 6,
+  "num_turns": 3,
+  "num_goals_detected": 1,
+  "num_failures": 0,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "There's some disagreement about what to do about a car accident. Can you help me with that?",
+      "agent_response": "Of course, I can get you the contact information for Parkside Police Station if you'd like.",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about help with a car accident situation. Agent offers police station contact info. This is Goal 1."
+    },
+    {
+      "turn_number": 2,
+      "user_message": "I would like the address and postcode please.",
+      "agent_response": "Okay the address is Parkside, Cambridge and the postcode is CB11JG. Anything else you need?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about same topic (police station address). Still part of Goal 1."
+    },
+    {
+      "turn_number": 3,
+      "user_message": "Thank you, goodbye.",
+      "agent_response": "You are more than welcome.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Simple goodbye exchange, still part of Goal 1. Agent responds appropriately."
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about help with a car accident situation. Agent offers police station contact info. This is Goal 1."
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about same topic (police station address). Still part of Goal 1."
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Simple goodbye exchange, still part of Goal 1. Agent responds appropriately."
+    }
+  ]
+}

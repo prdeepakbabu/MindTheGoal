@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog Viewer - MindTheGoal</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/dashboard" class="nav-brand">
+            <div class="nav-logo">🎯</div>
+            MindTheGoal
+        </a>
+        <div class="nav-links">
+            <a href="/evaluate" class="nav-link">Run Evaluation</a>
+            <a href="/dashboard" class="nav-link">Dashboard</a>
+            <a href="/chat" class="nav-link">Chat Demo</a>
+            <a href="/settings" class="nav-link">Settings</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="dialog-container">
+            <!-- Header -->
+            <div class="dialog-header">
+                <div>
+                    <h1 class="page-title" id="dialogTitle">Loading...</h1>
+                    <div class="dialog-meta" id="dialogMeta">
+                        <span class="badge badge-neutral">Loading...</span>
+                    </div>
+                </div>
+                <div class="dialog-actions">
+                    <button class="btn btn-secondary" onclick="copyToClipboard()">
+                        <span>📋</span> Copy
+                    </button>
+                    <button class="btn btn-secondary" onclick="shareOnX()">
+                        <span>𝕏</span> Share
+                    </button>
+                    <button class="btn btn-primary" onclick="downloadPDF()">
+                        <span>📥</span> Download PDF
+                    </button>
+                </div>
+            </div>
+
+            <!-- GSR Summary -->
+            <div class="card mb-4" id="gsrSummary">
+                <div class="flex items-center gap-4">
+                    <div>
+                        <div class="metric-label">Session GSR</div>
+                        <div class="metric-value success" id="sessionGSR">--</div>
+                    </div>
+                    <div style="width: 1px; height: 50px; background: var(--border);"></div>
+                    <div>
+                        <div class="metric-label">Goals</div>
+                        <div class="flex gap-3">
+                            <span><strong id="successCount">0</strong> <span class="text-success">✓</span></span>
+                            <span><strong id="failCount">0</strong> <span class="text-failure">✗</span></span>
+                        </div>
+                    </div>
+                    <div style="width: 1px; height: 50px; background: var(--border);"></div>
+                    <div>
+                        <div class="metric-label">Turns</div>
+                        <div><strong id="turnCount">0</strong></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dialog Content -->
+            <div id="dialogContent">
+                <div class="empty-state">
+                    <div class="loading-spinner"></div>
+                    <p class="mt-3">Loading dialog...</p>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="flex justify-between mt-4">
+                <button class="btn btn-secondary" id="prevBtn" onclick="navigateDialog(-1)" disabled>
+                    ← Previous
+                </button>
+                <a href="/dashboard" class="btn btn-secondary">
+                    Back to Dashboard
+                </a>
+                <button class="btn btn-secondary" id="nextBtn" onclick="navigateDialog(1)" disabled>
+                    Next →
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PDF Export Container (hidden) -->
+    <div id="pdfContent" style="display: none; background: #ffffff !important; color: #111827 !important; padding: 40px; max-width: 800px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; --bg: #ffffff; --bg-secondary: #f8fafc; --text: #111827; --text-muted: #6b7280;">
+        <div style="text-align: center; margin-bottom: 30px; border-bottom: 2px solid #4f46e5; padding-bottom: 20px;">
+            <h1 style="color: #4f46e5; margin: 0;">🎯 MindTheGoal Evaluation</h1>
+            <p style="color: #6b7280; margin-top: 10px;" id="pdfSubtitle"></p>
+        </div>
+        <div id="pdfDialogContent"></div>
+        <style id="pdfStyles">
+            #pdfContent .goal-section { 
+                margin-bottom: 24px; 
+                border: 1px solid #e5e7eb;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+            #pdfContent .goal-header { 
+                padding: 12px 16px; 
+                background: #f9fafb;
+                border-bottom: 1px solid #e5e7eb;
+            }
+            #pdfContent .goal-header.success { background: #ecfdf5; border-left: 4px solid #10b981; }
+            #pdfContent .goal-header.failure { background: #fef2f2; border-left: 4px solid #ef4444; }
+            #pdfContent .goal-number { font-weight: 700; color: #1f2937; }
+            #pdfContent .turn-card { 
+                padding: 16px; 
+                border-bottom: 1px solid #e5e7eb;
+                background: #ffffff;
+            }
+            #pdfContent .turn-card:last-child { border-bottom: none; }
+            #pdfContent .turn-header { 
+                display: flex; 
+                gap: 8px; 
+                margin-bottom: 12px; 
+                align-items: center;
+            }
+            #pdfContent .turn-number { 
+                font-weight: 600; 
+                color: #4f46e5;
+                background: #eef2ff;
+                padding: 2px 8px;
+                border-radius: 4px;
+                font-size: 12px;
+            }
+            #pdfContent .turn-user, #pdfContent .turn-agent { 
+                padding: 12px; 
+                border-radius: 8px; 
+                margin-bottom: 8px;
+                line-height: 1.5;
+                color: #111827 !important;
+            }
+            #pdfContent .turn-user { 
+                background: #dbeafe; 
+                border-left: 4px solid #2563eb;
+                color: #1e3a8a !important;
+            }
+            #pdfContent .turn-agent { 
+                background: #f1f5f9; 
+                border-left: 4px solid #475569;
+                color: #1e293b !important;
+            }
+            #pdfContent .turn-role { 
+                font-weight: 700; 
+                font-size: 12px; 
+                text-transform: uppercase;
+                color: #374151 !important;
+                margin-bottom: 6px;
+            }
+            #pdfContent .turn-reasoning { 
+                background: #fef3c7; 
+                padding: 10px 12px; 
+                border-radius: 6px;
+                font-size: 13px;
+                color: #92400e;
+                border-left: 3px solid #f59e0b;
+            }
+            #pdfContent .badge { 
+                display: inline-block;
+                padding: 2px 8px; 
+                border-radius: 4px; 
+                font-size: 11px;
+                font-weight: 600;
+            }
+            #pdfContent .badge-success { background: #dcfce7; color: #166534; }
+            #pdfContent .badge-failure { background: #fee2e2; color: #991b1b; }
+            #pdfContent .badge-info { background: #dbeafe; color: #1e40af; }
+            #pdfContent .rcof-tag { 
+                background: #fee2e2; 
+                color: #991b1b; 
+                padding: 2px 8px; 
+                border-radius: 4px; 
+                font-size: 11px;
+                font-weight: 600;
+            }
+            #pdfContent .metric-value { font-size: 24px; font-weight: 700; }
+            #pdfContent .metric-value.success { color: #10b981; }
+            #pdfContent .metric-value.failure { color: #ef4444; }
+            #pdfContent .text-muted { color: #4b5563 !important; }
+            #pdfContent * { color: #111827; }
+            #pdfContent .goal-section * { color: #111827; }
+            #pdfContent .turn-card * { color: #111827; }
+        </style>
+    </div>
+
+    <script>
+        const RCOF_LABELS = {
+            'E1': 'Language Understanding',
+            'E2': 'Refusal to Answer',
+            'E3': 'Incorrect Retrieval',
+            'E4': 'Retrieval Failure',
+            'E5': 'System Error',
+            'E6': 'Incorrect Routing',
+            'E7': 'Out-of-Domain'
+        };
+
+        let currentSessionId = null;
+        let currentData = null;
+        let allSessions = [];
+        let currentIndex = 0;
+
+        // Get session ID from URL
+        function getSessionIdFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('session');
+        }
+
+        // Load evaluation data and find session
+        async function loadDialog() {
+            currentSessionId = getSessionIdFromURL();
+            
+            if (!currentSessionId) {
+                showError('No session ID provided');
+                return;
+            }
+
+            // Get list of all available results files from API
+            let files = [];
+            try {
+                const listResponse = await fetch('/api/evaluation/results');
+                const listData = await listResponse.json();
+                files = (listData.results || []).map(r => r.filename);
+            } catch (e) {
+                // Fallback to default files
+                files = ['multiwoz_100_results.json', 'multiwoz_fixed_results.json', 'multiwoz_10_results.json', 'results.json'];
+            }
+            
+            for (const file of files) {
+                try {
+                    const response = await fetch(`/api/evaluation/results/${file}`);
+                    const data = await response.json();
+                    
+                    if (data.session_details) {
+                        allSessions = data.session_details;
+                        const sessionIndex = allSessions.findIndex(s => s.session_id === currentSessionId);
+                        
+                        if (sessionIndex !== -1) {
+                            currentIndex = sessionIndex;
+                            currentData = allSessions[sessionIndex];
+                            await loadFullSession();
+                            return;
+                        }
+                    }
+                } catch (e) {
+                    console.log(`Could not load ${file}`);
+                }
+            }
+            
+            showError('Session not found in any evaluation results');
+        }
+
+        // Load full session data from logs
+        async function loadFullSession() {
+            // Get list of log directories from API
+            try {
+                const logDirsResponse = await fetch('/api/evaluation/logs');
+                const logDirsData = await logDirsResponse.json();
+                const logDirs = logDirsData.log_dirs || [];
+                
+                // Try each log directory to find the session
+                for (const dir of logDirs) {
+                    try {
+                        const response = await fetch(`/api/evaluation/logs/${dir.name}/session-by-id/${currentSessionId}`);
+                        if (response.ok) {
+                            const fullData = await response.json();
+                            renderDialog(fullData);
+                            updateNavigation();
+                            return;
+                        }
+                    } catch (e) {
+                        console.log(`Session not in ${dir.name}`);
+                    }
+                }
+            } catch (e) {
+                console.log('Could not load log directories:', e);
+            }
+            
+            // Fall back to summary data
+            renderDialogFromSummary(currentData);
+            updateNavigation();
+        }
+
+        function renderDialog(session) {
+            document.getElementById('dialogTitle').textContent = `Session: ${session.session_id || currentSessionId}`;
+            
+            const numTurns = session.turns?.length || session.num_turns || 0;
+            
+            // Check if we have detailed log format (turns array at root) vs summary format (goals array)
+            const hasDetailedTurns = session.turns && session.turns.length > 0 && session.turns[0].user_message;
+            
+            // Calculate goals from turns if no goals array
+            let goals = session.goals || [];
+            if (hasDetailedTurns && (!goals || goals.length === 0)) {
+                // Group turns into goals based on is_new_goal flag
+                goals = [];
+                let currentGoal = null;
+                session.turns.forEach((turn, i) => {
+                    if (turn.is_new_goal || i === 0) {
+                        if (currentGoal) goals.push(currentGoal);
+                        currentGoal = {
+                            goal_number: goals.length + 1,
+                            turns: [],
+                            quality: 'success',
+                            rcof: null
+                        };
+                    }
+                    if (currentGoal) {
+                        currentGoal.turns.push(turn);
+                        if (turn.quality === 'failure') {
+                            currentGoal.quality = 'failure';
+                            currentGoal.rcof = turn.rcof;
+                        }
+                    }
+                });
+                if (currentGoal) goals.push(currentGoal);
+            }
+            
+            const totalGoals = goals.length || session.num_goals_detected || 0;
+            const successGoals = goals.filter(g => g.quality === 'success').length;
+            const failGoals = totalGoals - successGoals;
+            const gsr = totalGoals > 0 ? (successGoals / totalGoals * 100) : 0;
+            
+            // Update meta
+            document.getElementById('dialogMeta').innerHTML = `
+                <span class="badge ${gsr >= 70 ? 'badge-success' : gsr >= 50 ? 'badge-warning' : 'badge-failure'}">
+                    GSR: ${gsr.toFixed(0)}%
+                </span>
+                <span class="badge badge-info">${totalGoals} goals</span>
+                <span class="badge badge-neutral">${numTurns} turns</span>
+            `;
+            
+            // Update summary
+            document.getElementById('sessionGSR').textContent = `${gsr.toFixed(0)}%`;
+            document.getElementById('sessionGSR').className = `metric-value ${gsr >= 70 ? 'success' : gsr >= 50 ? 'warning' : 'failure'}`;
+            document.getElementById('successCount').textContent = successGoals;
+            document.getElementById('failCount').textContent = failGoals;
+            document.getElementById('turnCount').textContent = numTurns;
+            
+            // Render goals and turns
+            const content = document.getElementById('dialogContent');
+            
+            if (goals.length === 0) {
+                content.innerHTML = '<div class="empty-state"><p>No goal data available</p></div>';
+                return;
+            }
+            
+            let turnIndex = 0;
+            content.innerHTML = goals.map((goal, gi) => {
+                const isSuccess = goal.quality === 'success';
+                const turnsHtml = (goal.turns || []).map((turn, ti) => {
+                    turnIndex++;
+                    const turnSuccess = turn.quality === 'success';
+                    return `
+                        <div class="turn-card">
+                            <div class="turn-header">
+                                <span class="turn-number">Turn ${turnIndex}</span>
+                                ${turn.is_new_goal ? '<span class="badge badge-info">NEW GOAL</span>' : ''}
+                                <span class="badge ${turnSuccess ? 'badge-success' : 'badge-failure'}">
+                                    ${turnSuccess ? '✓ Success' : '✗ Failure'}
+                                </span>
+                                ${turn.rcof ? `<span class="rcof-tag ${turn.rcof}">${turn.rcof}</span>` : ''}
+                            </div>
+                            <div class="turn-user">
+                                <div class="turn-role">User</div>
+                                ${turn.user_message || turn.user || 'No user message'}
+                            </div>
+                            <div class="turn-agent">
+                                <div class="turn-role">Agent</div>
+                                ${turn.agent_response || turn.agent || 'No agent response'}
+                            </div>
+                            ${turn.judge_reasoning ? `
+                                <div class="turn-reasoning">
+                                    <div class="turn-reasoning-label">Judge Reasoning</div>
+                                    ${turn.judge_reasoning}
+                                </div>
+                            ` : ''}
+                        </div>
+                    `;
+                }).join('');
+                
+                return `
+                    <div class="goal-section fade-in">
+                        <div class="goal-header ${isSuccess ? 'success' : 'failure'}">
+                            <span class="goal-number">Goal ${gi + 1}</span>
+                            <span class="badge ${isSuccess ? 'badge-success' : 'badge-failure'}">
+                                ${isSuccess ? '✓ SUCCESS' : '✗ FAILURE'}
+                            </span>
+                            ${goal.rcof ? `
+                                <span class="rcof-tag ${goal.rcof}">
+                                    ${goal.rcof}: ${RCOF_LABELS[goal.rcof] || 'Unknown'}
+                                </span>
+                            ` : ''}
+                            <span class="text-muted" style="margin-left: auto;">
+                                ${goal.turns?.length || goal.num_turns || '?'} turns
+                            </span>
+                        </div>
+                        ${turnsHtml || '<div class="turn-card"><p class="text-muted">Turn details not available</p></div>'}
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function renderDialogFromSummary(session) {
+            document.getElementById('dialogTitle').textContent = `Session: ${session.session_id}`;
+            
+            const totalGoals = session.goals?.length || session.num_goals || 0;
+            const successGoals = session.goals?.filter(g => g.quality === 'success').length || 0;
+            const failGoals = totalGoals - successGoals;
+            const gsr = totalGoals > 0 ? (successGoals / totalGoals * 100) : 0;
+            
+            // Update meta
+            document.getElementById('dialogMeta').innerHTML = `
+                <span class="badge ${gsr >= 70 ? 'badge-success' : gsr >= 50 ? 'badge-warning' : 'badge-failure'}">
+                    GSR: ${gsr.toFixed(0)}%
+                </span>
+                <span class="badge badge-info">${totalGoals} goals</span>
+                <span class="badge badge-neutral">${session.num_turns || '?'} turns</span>
+            `;
+            
+            // Update summary
+            document.getElementById('sessionGSR').textContent = `${gsr.toFixed(0)}%`;
+            document.getElementById('sessionGSR').className = `metric-value ${gsr >= 70 ? 'success' : gsr >= 50 ? 'warning' : 'failure'}`;
+            document.getElementById('successCount').textContent = successGoals;
+            document.getElementById('failCount').textContent = failGoals;
+            document.getElementById('turnCount').textContent = session.num_turns || '?';
+            
+            // Render goals (summary only)
+            const content = document.getElementById('dialogContent');
+            content.innerHTML = session.goals.map((goal, gi) => {
+                const isSuccess = goal.quality === 'success';
+                return `
+                    <div class="goal-section fade-in">
+                        <div class="goal-header ${isSuccess ? 'success' : 'failure'}">
+                            <span class="goal-number">Goal ${goal.goal_number || gi + 1}</span>
+                            <span class="badge ${isSuccess ? 'badge-success' : 'badge-failure'}">
+                                ${isSuccess ? '✓ SUCCESS' : '✗ FAILURE'}
+                            </span>
+                            ${goal.rcof ? `
+                                <span class="rcof-tag ${goal.rcof}">
+                                    ${goal.rcof}: ${RCOF_LABELS[goal.rcof] || 'Unknown'}
+                                </span>
+                            ` : ''}
+                            <span class="text-muted" style="margin-left: auto;">
+                                ${goal.num_turns || '?'} turns
+                            </span>
+                        </div>
+                        <div class="turn-card">
+                            <p class="text-muted text-center">
+                                Detailed turn data not available in summary view.<br>
+                                Run evaluation with detailed logging to see turn content.
+                            </p>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function showError(message) {
+            document.getElementById('dialogTitle').textContent = 'Error';
+            document.getElementById('dialogContent').innerHTML = `
+                <div class="empty-state">
+                    <div class="empty-state-icon">❌</div>
+                    <div class="empty-state-title">${message}</div>
+                    <p class="mt-2"><a href="/dashboard" class="btn btn-primary">Back to Dashboard</a></p>
+                </div>
+            `;
+        }
+
+        function updateNavigation() {
+            document.getElementById('prevBtn').disabled = currentIndex <= 0;
+            document.getElementById('nextBtn').disabled = currentIndex >= allSessions.length - 1;
+        }
+
+        function navigateDialog(direction) {
+            currentIndex += direction;
+            if (currentIndex >= 0 && currentIndex < allSessions.length) {
+                currentSessionId = allSessions[currentIndex].session_id;
+                currentData = allSessions[currentIndex];
+                window.history.pushState({}, '', `viewer.html?session=${currentSessionId}`);
+                loadFullSession();
+            }
+        }
+
+        function copyToClipboard() {
+            const content = document.getElementById('dialogContent').innerText;
+            const header = `MindTheGoal Evaluation - Session: ${currentSessionId}\n${'='.repeat(50)}\n\n`;
+            
+            navigator.clipboard.writeText(header + content).then(() => {
+                alert('Dialog copied to clipboard!');
+            }).catch(err => {
+                console.error('Copy failed:', err);
+            });
+        }
+
+        function shareOnX() {
+            const gsr = document.getElementById('sessionGSR').textContent;
+            const goals = document.getElementById('successCount').textContent + ' success, ' + 
+                         document.getElementById('failCount').textContent + ' failed';
+            
+            const text = `🎯 MindTheGoal Evaluation Results\n\nSession GSR: ${gsr}\nGoals: ${goals}\n\n#AI #Evaluation #LLM`;
+            const url = window.location.href;
+            
+            window.open(
+                `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`,
+                '_blank',
+                'width=550,height=420'
+            );
+        }
+
+        function downloadPDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF({ unit: 'mm', format: 'a4' });
+            
+            const gsr = document.getElementById('sessionGSR').textContent;
+            const successCount = document.getElementById('successCount').textContent;
+            const failCount = document.getElementById('failCount').textContent;
+            const turnCount = document.getElementById('turnCount').textContent;
+            
+            const pageWidth = 210;
+            const margin = 15;
+            const contentWidth = pageWidth - 2 * margin;
+            let y = 20;
+            
+            // Helper to add text with word wrap
+            function addText(text, x, fontSize, isBold, maxWidth) {
+                doc.setFontSize(fontSize);
+                doc.setFont('helvetica', isBold ? 'bold' : 'normal');
+                const lines = doc.splitTextToSize(text, maxWidth || contentWidth);
+                doc.text(lines, x, y);
+                y += lines.length * (fontSize * 0.4) + 2;
+            }
+            
+            function checkPage(neededHeight) {
+                if (y + neededHeight > 280) {
+                    doc.addPage();
+                    y = 20;
+                }
+            }
+            
+            // Title
+            doc.setTextColor(79, 70, 229);
+            addText('MindTheGoal Evaluation', margin, 20, true);
+            
+            doc.setTextColor(107, 114, 128);
+            addText(`Session: ${currentSessionId} | Generated: ${new Date().toLocaleString()}`, margin, 10, false);
+            y += 5;
+            
+            // Summary box
+            doc.setDrawColor(226, 232, 240);
+            doc.setFillColor(248, 250, 252);
+            doc.roundedRect(margin, y, contentWidth, 25, 3, 3, 'FD');
+            
+            doc.setTextColor(100, 116, 139);
+            doc.setFontSize(8);
+            doc.text('SESSION GSR', margin + 15, y + 8);
+            doc.text('GOALS', margin + 65, y + 8);
+            doc.text('TURNS', margin + 130, y + 8);
+            
+            if (parseFloat(gsr) >= 70) {
+                doc.setTextColor(16, 185, 129);
+            } else {
+                doc.setTextColor(239, 68, 68);
+            }
+            doc.setFontSize(18);
+            doc.setFont('helvetica', 'bold');
+            doc.text(gsr, margin + 15, y + 18);
+            
+            doc.setTextColor(17, 24, 39);
+            doc.setFontSize(12);
+            // Draw checkmark icon
+            doc.setFillColor(16, 185, 129);
+            doc.circle(margin + 65, y + 16, 3, 'F');
+            doc.setDrawColor(255, 255, 255);
+            doc.setLineWidth(0.6);
+            doc.line(margin + 63.5, y + 16, margin + 64.5, y + 17.5);
+            doc.line(margin + 64.5, y + 17.5, margin + 67, y + 14);
+            doc.setTextColor(17, 24, 39);
+            doc.text(`${successCount}`, margin + 70, y + 18);
+            // Draw X icon
+            doc.setFillColor(239, 68, 68);
+            doc.circle(margin + 85, y + 16, 3, 'F');
+            doc.setDrawColor(255, 255, 255);
+            doc.line(margin + 83.5, y + 14.5, margin + 86.5, y + 17.5);
+            doc.line(margin + 86.5, y + 14.5, margin + 83.5, y + 17.5);
+            doc.setTextColor(17, 24, 39);
+            doc.text(`${failCount}`, margin + 90, y + 18);
+            doc.text(turnCount, margin + 130, y + 18);
+            
+            y += 35;
+            
+            // Section header
+            doc.setTextColor(17, 24, 39);
+            addText('Conversation Details', margin, 14, true);
+            y += 3;
+            
+            // Goals and turns
+            const goalSections = document.querySelectorAll('.goal-section');
+            let turnIdx = 0;
+            
+            goalSections.forEach((section, gi) => {
+                checkPage(30);
+                
+                const header = section.querySelector('.goal-header');
+                const isSuccess = header.classList.contains('success');
+                const rcofTag = section.querySelector('.rcof-tag');
+                const rcofText = rcofTag ? rcofTag.textContent.trim() : '';
+                
+                // Goal header
+                if (isSuccess) {
+                    doc.setFillColor(220, 252, 231);
+                } else {
+                    doc.setFillColor(254, 226, 226);
+                }
+                doc.roundedRect(margin, y, contentWidth, 10, 2, 2, 'F');
+                
+                doc.setTextColor(17, 24, 39);
+                doc.setFontSize(11);
+                doc.setFont('helvetica', 'bold');
+                doc.text(`Goal ${gi + 1}`, margin + 3, y + 7);
+                
+                doc.setFontSize(9);
+                if (isSuccess) {
+                    doc.setTextColor(22, 101, 52);
+                } else {
+                    doc.setTextColor(153, 27, 27);
+                }
+                doc.text(isSuccess ? 'SUCCESS' : 'FAILURE', margin + 30, y + 7);
+                
+                if (rcofText) {
+                    doc.setTextColor(146, 64, 14);
+                    doc.text(rcofText, margin + 60, y + 7);
+                }
+                
+                y += 14;
+                
+                // Turns
+                const turnCards = section.querySelectorAll('.turn-card');
+                turnCards.forEach((card, ti) => {
+                    checkPage(35);
+                    turnIdx++;
+                    
+                    const userDiv = card.querySelector('.turn-user');
+                    const agentDiv = card.querySelector('.turn-agent');
+                    let userText = userDiv ? userDiv.textContent.replace(/^User\s*/i, '').trim() : 'No message';
+                    let agentText = agentDiv ? agentDiv.textContent.replace(/^Agent\s*/i, '').trim() : 'No response';
+                    
+                    // Check turn success
+                    const turnStatusBadge = card.querySelector('.badge-success, .badge-failure');
+                    const turnSuccess = turnStatusBadge ? turnStatusBadge.classList.contains('badge-success') : true;
+                    
+                    // Turn number
+                    doc.setFillColor(224, 231, 255);
+                    doc.roundedRect(margin, y, 18, 6, 1, 1, 'F');
+                    doc.setTextColor(67, 56, 202);
+                    doc.setFontSize(8);
+                    doc.setFont('helvetica', 'bold');
+                    doc.text(`Turn ${turnIdx}`, margin + 2, y + 4.5);
+                    
+                    // Turn success/failure badge
+                    if (turnSuccess) {
+                        doc.setFillColor(220, 252, 231);
+                        doc.roundedRect(margin + 20, y, 16, 6, 1, 1, 'F');
+                        doc.setTextColor(22, 101, 52);
+                    } else {
+                        doc.setFillColor(254, 226, 226);
+                        doc.roundedRect(margin + 20, y, 16, 6, 1, 1, 'F');
+                        doc.setTextColor(153, 27, 27);
+                    }
+                    doc.setFontSize(6);
+                    doc.text(turnSuccess ? 'Success' : 'Failure', margin + 22, y + 4.3);
+                    y += 9;
+                    
+                    // User message
+                    doc.setFillColor(239, 246, 255);
+                    const userLines = doc.splitTextToSize(userText, contentWidth - 10);
+                    const userHeight = Math.max(12, userLines.length * 4 + 8);
+                    doc.roundedRect(margin, y, contentWidth, userHeight, 2, 2, 'F');
+                    doc.setDrawColor(59, 130, 246);
+                    doc.line(margin, y, margin, y + userHeight);
+                    
+                    doc.setTextColor(29, 78, 216);
+                    doc.setFontSize(7);
+                    doc.text('USER', margin + 4, y + 5);
+                    doc.setTextColor(30, 58, 138);
+                    doc.setFontSize(9);
+                    doc.setFont('helvetica', 'normal');
+                    doc.text(userLines, margin + 4, y + 10);
+                    y += userHeight + 3;
+                    
+                    checkPage(20);
+                    
+                    // Agent message
+                    doc.setFillColor(248, 250, 252);
+                    const agentLines = doc.splitTextToSize(agentText, contentWidth - 10);
+                    const agentHeight = Math.max(12, agentLines.length * 4 + 8);
+                    doc.roundedRect(margin, y, contentWidth, agentHeight, 2, 2, 'F');
+                    doc.setDrawColor(100, 116, 139);
+                    doc.line(margin, y, margin, y + agentHeight);
+                    
+                    doc.setTextColor(71, 85, 105);
+                    doc.setFontSize(7);
+                    doc.setFont('helvetica', 'bold');
+                    doc.text('AGENT', margin + 4, y + 5);
+                    doc.setTextColor(30, 41, 59);
+                    doc.setFontSize(9);
+                    doc.setFont('helvetica', 'normal');
+                    doc.text(agentLines, margin + 4, y + 10);
+                    y += agentHeight + 6;
+                });
+                
+                y += 5;
+            });
+            
+            // Footer
+            checkPage(15);
+            doc.setTextColor(156, 163, 175);
+            doc.setFontSize(8);
+            doc.text('Generated by MindTheGoal Framework', pageWidth / 2, 290, { align: 'center' });
+            
+            doc.save(`mindthegoal_${currentSessionId}.pdf`);
+        }
+
+        function buildPDFContent() {
+            const gsr = document.getElementById('sessionGSR').textContent;
+            const successCount = document.getElementById('successCount').textContent;
+            const failCount = document.getElementById('failCount').textContent;
+            const turnCount = document.getElementById('turnCount').textContent;
+            
+            // Get goals data
+            const goalSections = document.querySelectorAll('.goal-section');
+            let goalsHtml = '';
+            
+            goalSections.forEach((section, gi) => {
+                const header = section.querySelector('.goal-header');
+                const isSuccess = header.classList.contains('success');
+                const rcofTag = section.querySelector('.rcof-tag');
+                const rcofText = rcofTag ? rcofTag.textContent : '';
+                const turnCards = section.querySelectorAll('.turn-card');
+                
+                let turnsHtml = '';
+                turnCards.forEach((card, ti) => {
+                    const turnNum = card.querySelector('.turn-number');
+                    const isNewGoal = card.querySelector('.badge-info');
+                    const statusBadge = card.querySelector('.badge-success, .badge-failure');
+                    const isSuccess = statusBadge?.classList.contains('badge-success');
+                    const userDiv = card.querySelector('.turn-user');
+                    const agentDiv = card.querySelector('.turn-agent');
+                    const reasoning = card.querySelector('.turn-reasoning');
+                    
+                    turnsHtml += `
+                        <div style="padding: 16px; border-bottom: 1px solid #d1d5db; background: #ffffff;">
+                            <div style="display: flex; gap: 8px; margin-bottom: 12px; align-items: center;">
+                                <span style="font-weight: 600; color: #1e40af; background: #dbeafe; padding: 2px 8px; border-radius: 4px; font-size: 12px;">
+                                    ${turnNum?.textContent || `Turn ${ti+1}`}
+                                </span>
+                                ${isNewGoal ? '<span style="background: #dbeafe; color: #1e40af; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">NEW GOAL</span>' : ''}
+                                <span style="background: ${isSuccess ? '#dcfce7' : '#fee2e2'}; color: ${isSuccess ? '#166534' : '#991b1b'}; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">
+                                    ${isSuccess ? '✓ Success' : '✗ Failure'}
+                                </span>
+                            </div>
+                            <div style="background: #dbeafe; color: #1e3a8a; padding: 12px; border-radius: 8px; margin-bottom: 8px; border-left: 4px solid #2563eb;">
+                                <div style="font-weight: 700; font-size: 11px; text-transform: uppercase; color: #1e40af; margin-bottom: 4px;">USER</div>
+                                <div style="color: #1e3a8a;">${userDiv?.textContent.replace('User', '').trim() || ''}</div>
+                            </div>
+                            <div style="background: #f1f5f9; color: #0f172a; padding: 12px; border-radius: 8px; margin-bottom: 8px; border-left: 4px solid #475569;">
+                                <div style="font-weight: 700; font-size: 11px; text-transform: uppercase; color: #334155; margin-bottom: 4px;">AGENT</div>
+                                <div style="color: #0f172a;">${agentDiv?.textContent.replace('Agent', '').trim() || ''}</div>
+                            </div>
+                            ${reasoning ? `
+                                <div style="background: #fef3c7; color: #92400e; padding: 10px 12px; border-radius: 6px; font-size: 13px; border-left: 3px solid #f59e0b;">
+                                    ${reasoning.textContent}
+                                </div>
+                            ` : ''}
+                        </div>
+                    `;
+                });
+                
+                goalsHtml += `
+                    <div style="margin-bottom: 24px; border: 1px solid #d1d5db; border-radius: 8px; overflow: hidden;">
+                        <div style="padding: 12px 16px; background: ${isSuccess ? '#dcfce7' : '#fee2e2'}; border-left: 4px solid ${isSuccess ? '#10b981' : '#ef4444'}; display: flex; align-items: center; gap: 12px;">
+                            <span style="font-weight: 700; color: #111827;">Goal ${gi + 1}</span>
+                            <span style="background: ${isSuccess ? '#bbf7d0' : '#fecaca'}; color: ${isSuccess ? '#166534' : '#991b1b'}; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">
+                                ${isSuccess ? '✓ SUCCESS' : '✗ FAILURE'}
+                            </span>
+                            ${rcofText ? `<span style="background: #fef3c7; color: #92400e; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">${rcofText}</span>` : ''}
+                        </div>
+                        ${turnsHtml}
+                    </div>
+                `;
+            });
+            
+            return `
+                <div style="background: #ffffff; color: #111827; padding: 40px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                    <div style="text-align: center; margin-bottom: 30px; border-bottom: 2px solid #4f46e5; padding-bottom: 20px;">
+                        <h1 style="color: #4f46e5; margin: 0; font-size: 28px;">🎯 MindTheGoal Evaluation</h1>
+                        <p style="color: #6b7280; margin-top: 10px;">Session: ${currentSessionId} | Generated: ${new Date().toLocaleString()}</p>
+                    </div>
+                    
+                    <div style="display: flex; gap: 40px; margin-bottom: 30px; padding: 20px; background: #f8fafc; border-radius: 8px;">
+                        <div>
+                            <div style="font-size: 12px; color: #6b7280; text-transform: uppercase;">Session GSR</div>
+                            <div style="font-size: 32px; font-weight: 700; color: ${parseFloat(gsr) >= 70 ? '#10b981' : '#ef4444'};">${gsr}</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 12px; color: #6b7280; text-transform: uppercase;">Goals</div>
+                            <div style="font-size: 18px; color: #111827;"><strong>${successCount}</strong> ✓ <strong>${failCount}</strong> ✗</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 12px; color: #6b7280; text-transform: uppercase;">Turns</div>
+                            <div style="font-size: 18px; color: #111827;"><strong>${turnCount}</strong></div>
+                        </div>
+                    </div>
+                    
+                    ${goalsHtml}
+                </div>
+            `;
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', loadDialog);
+    </script>
+</body>
+</html>

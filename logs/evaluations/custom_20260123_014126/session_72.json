@@ -1,0 +1,107 @@
+{
+  "session_id": "4699371072",
+  "session_index": 72,
+  "num_turns": 6,
+  "num_goals_detected": 2,
+  "num_failures": 0,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "I am looking for a place for a restaurant called anatolia. Can you help me? ",
+      "agent_response": "Anatolia is a moderately priced Turkish restaurant in the city centre.",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about restaurant Anatolia. This is Goal 1."
+    },
+    {
+      "turn_number": 2,
+      "user_message": "Thank you. What is the post code?",
+      "agent_response": "The post code is cb21uj. Would you like me to book a table for you?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about same restaurant (postcode). Same goal."
+    },
+    {
+      "turn_number": 3,
+      "user_message": "No but I do need help finding a train leaving Kings Cross after 15:45.",
+      "agent_response": "Okay what day would you like to leave?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to train booking (Goal 2). Clear domain switch from restaurant to train."
+    },
+    {
+      "turn_number": 4,
+      "user_message": "The train should go to cambridge and should leave on sunday.",
+      "agent_response": "I found 4 trains departing Kings Cross, heading to Cambridge after 15:45 on Sunday. What time would you like to depart? ",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train discussion, providing additional constraints. Same goal."
+    },
+    {
+      "turn_number": 5,
+      "user_message": "I have no preference. I just need to book one of those for 4 people.",
+      "agent_response": "OK, you have 4 seats reserved on TR2952, reference #J5O3AMV7. Can I help you with anything else today?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing train booking, making the reservation. Same goal."
+    },
+    {
+      "turn_number": 6,
+      "user_message": "No that will be all.  Thank you",
+      "agent_response": "Perfect. Thank you for using the Cambridge TownInfo centre. Enjoy the rest of your day.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Conversation closing, no new goal. Just thanking the agent."
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about restaurant Anatolia. This is Goal 1."
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about same restaurant (postcode). Same goal."
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to train booking (Goal 2). Clear domain switch from restaurant to train."
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train discussion, providing additional constraints. Same goal."
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing train booking, making the reservation. Same goal."
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Conversation closing, no new goal. Just thanking the agent."
+    }
+  ]
+}

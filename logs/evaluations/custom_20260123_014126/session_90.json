@@ -1,0 +1,139 @@
+{
+  "session_id": "4708282368",
+  "session_index": 90,
+  "num_turns": 8,
+  "num_goals_detected": 2,
+  "num_failures": 1,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "I'd like to find a restaurant that offers Asian Oriental cuisine, in the centre, if possible.",
+      "agent_response": "Definitely! I have places from cheap to expensive, though my favorite is Yippee Noodle Bar, which is moderately-priced. ",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user initiates Goal 1 (restaurant search). Agent provides relevant suggestion."
+    },
+    {
+      "turn_number": 2,
+      "user_message": "I would like Yippee.",
+      "agent_response": "I'd be happy to make a reservation for you.  What day/time will you be dining, and how many are in your party?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing restaurant discussion - user accepts suggestion and agent asks booking details."
+    },
+    {
+      "turn_number": 3,
+      "user_message": "Monday, 19:00, for 6 people.",
+      "agent_response": "I have successfully reserved a table for your party of 6 at the Yippee Noodle Bar for Monday at 19:00. Your reference number is XSQHK9YG ",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still on restaurant goal - completing booking with specific details."
+    },
+    {
+      "turn_number": 4,
+      "user_message": "Great, I also need a hotel room if you can help me find something.",
+      "agent_response": "Sure. We have several places ready to book. Which part of town would you like?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User explicitly starts new Goal 2 ('I also need a hotel') - switching to hotel domain."
+    },
+    {
+      "turn_number": 5,
+      "user_message": "The west please.",
+      "agent_response": "There are 4 in that area do you have a price range or type of hotel you prefer?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing hotel discussion with location preference."
+    },
+    {
+      "turn_number": 6,
+      "user_message": "The hotel doesn't need to include internet. It should be in the same area as the restaurant. ",
+      "agent_response": "I have 5 different options for you. They vary in price range. Did you have a certain price range in mind?",
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E1",
+      "reasoning": "Agent misunderstands user's request - user wants hotel in center (near restaurant) but agent still focuses on west area."
+    },
+    {
+      "turn_number": 7,
+      "user_message": "The price does not matter.   Please make a recommendation and book it for the same group of people and 4 nights starting from the same day.",
+      "agent_response": "OK, you are booked in Cityroomz as requested, the reference number is A1ZBLCZ3, any further questions?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Completing hotel booking with specific details."
+    },
+    {
+      "turn_number": 8,
+      "user_message": "no and thank you for your help",
+      "agent_response": "Ok, have a great day!",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Conversation closing - user confirms no more needs."
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user initiates Goal 1 (restaurant search). Agent provides relevant suggestion."
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing restaurant discussion - user accepts suggestion and agent asks booking details."
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still on restaurant goal - completing booking with specific details."
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User explicitly starts new Goal 2 ('I also need a hotel') - switching to hotel domain."
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing hotel discussion with location preference."
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E1",
+      "reasoning": "Agent misunderstands user's request - user wants hotel in center (near restaurant) but agent still focuses on west area."
+    },
+    {
+      "turn_number": 7,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Completing hotel booking with specific details."
+    },
+    {
+      "turn_number": 8,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Conversation closing - user confirms no more needs."
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "session_id": "4709316096",
+  "session_index": 22,
+  "num_turns": 9,
+  "num_goals_detected": 2,
+  "num_failures": 1,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "Hi, can you please help me find a restaurant that serves Kosher food?",
+      "agent_response": "im sorry there are no places serving kosher food",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1 (restaurant search). Agent correctly indicates no kosher options."
+    },
+    {
+      "turn_number": 2,
+      "user_message": "That's alright. How about Chinese food?",
+      "agent_response": "Yeah, there are a lot of options.  Was there a specific part of town or price range you were looking at? ",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues restaurant search (same goal), just modifying cuisine preference. Agent provides helpful response."
+    },
+    {
+      "turn_number": 3,
+      "user_message": "I need it to be in the moderate range please. ",
+      "agent_response": "great, i have four options for you!",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing same restaurant search, adding price constraint. Agent confirms options exist."
+    },
+    {
+      "turn_number": 4,
+      "user_message": "cool, which one is the best?",
+      "agent_response": "I like the golden wok. Would you like a booking made.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about same restaurant. Agent recommends specific option."
+    },
+    {
+      "turn_number": 5,
+      "user_message": "No thanks. I would like the area, address, and postcode please and I will take it from there. ",
+      "agent_response": "The Golden Wok is located in the North part of town at 191 Histon Rd, Chesterton.  The postcode is CB43HL.  Is there anything else I can help you with?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing Golden Wok restaurant, requesting details. Agent provides complete information."
+    },
+    {
+      "turn_number": 6,
+      "user_message": "I also need a train from Cambridge to Norwich. ",
+      "agent_response": "on which day do you want to travel?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 2 (train booking) - completely different service/domain from restaurant."
+    },
+    {
+      "turn_number": 7,
+      "user_message": "I need to leave Monday and arrive by 21:30.",
+      "agent_response": "train TR3753 arrives at \tnorwich at 09:55, should I book that?",
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E3",
+      "reasoning": "Still discussing train booking. Agent suggests train arriving 09:55 when user requested arrival by 21:30 - incorrect information."
+    },
+    {
+      "turn_number": 8,
+      "user_message": "Yes that should work, how much will that cost? ",
+      "agent_response": "17.60 pounds per person, also how many shall I book for?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train discussion, asking about price. Agent provides fare and asks about number of tickets."
+    },
+    {
+      "turn_number": 9,
+      "user_message": "That is all I need today thank you for your time.",
+      "agent_response": "Have a nice day.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User concludes conversation, agent provides appropriate closing."
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1 (restaurant search). Agent correctly indicates no kosher options."
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues restaurant search (same goal), just modifying cuisine preference. Agent provides helpful response."
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing same restaurant search, adding price constraint. Agent confirms options exist."
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up question about same restaurant. Agent recommends specific option."
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing Golden Wok restaurant, requesting details. Agent provides complete information."
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 2 (train booking) - completely different service/domain from restaurant."
+    },
+    {
+      "turn_number": 7,
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E3",
+      "reasoning": "Still discussing train booking. Agent suggests train arriving 09:55 when user requested arrival by 21:30 - incorrect information."
+    },
+    {
+      "turn_number": 8,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing train discussion, asking about price. Agent provides fare and asks about number of tickets."
+    },
+    {
+      "turn_number": 9,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User concludes conversation, agent provides appropriate closing."
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "session_id": "4417981376",
+  "session_index": 86,
+  "num_turns": 7,
+  "num_goals_detected": 3,
+  "num_failures": 0,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "I need to find a 4 star hotel in the north",
+      "agent_response": "I found several guesthouses.  There are many in the moderate price range, and one in the cheap range.  Do you have a preference?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1: finding a 4-star hotel in north. Agent provides relevant options."
+    },
+    {
+      "turn_number": 2,
+      "user_message": "A moderate price range is fine and I need it to have free parking as well.",
+      "agent_response": "How about the Acorn Guest House? It's moderately priced and has free parking.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues hotel discussion, adding constraints (price, parking). Same Goal 1."
+    },
+    {
+      "turn_number": 3,
+      "user_message": "Yes please book it for 4 people for 2 nights starting monday for me.",
+      "agent_response": "Booking was successful! Your reference number is  DXD1MDA6.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still part of hotel booking goal - making the actual reservation. Same Goal 1."
+    },
+    {
+      "turn_number": 4,
+      "user_message": "I'm also interested in finding a good Chinese food place near the hotel. Can you help me find one?",
+      "agent_response": "There are three choices.  Hakka and the hotpot which is expensive and golden wok which is moderate, do you have a preference?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 2: finding a Chinese restaurant. New domain/service."
+    },
+    {
+      "turn_number": 5,
+      "user_message": "I'll take Hakka. Can you book me a table on Monday at 15:00 for 4 people? ",
+      "agent_response": "I've reserved your table at Hakka on Monday, 15:00, for 4 people. Your reference number is K6D87RRX. Can I help with anything else?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues restaurant discussion, making reservation. Same Goal 2."
+    },
+    {
+      "turn_number": 6,
+      "user_message": "Yes, I will need a taxi to take me from the hotel to the restaurant and back to the hotel.",
+      "agent_response": "You are booked to arrive at the restaurant by three, look for a blue ford, the driver can be contacted by phone at 07232608741",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 3: arranging taxi transport. New service/domain."
+    },
+    {
+      "turn_number": 7,
+      "user_message": "Thank you, that will be all.",
+      "agent_response": "Okay, have a great day!",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Closing conversation, no new goal. Agent provides appropriate farewell."
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1: finding a 4-star hotel in north. Agent provides relevant options."
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues hotel discussion, adding constraints (price, parking). Same Goal 1."
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still part of hotel booking goal - making the actual reservation. Same Goal 1."
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 2: finding a Chinese restaurant. New domain/service."
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues restaurant discussion, making reservation. Same Goal 2."
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 3: arranging taxi transport. New service/domain."
+    },
+    {
+      "turn_number": 7,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Closing conversation, no new goal. Agent provides appropriate farewell."
+    }
+  ]
+}

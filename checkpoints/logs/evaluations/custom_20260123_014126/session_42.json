@@ -1,0 +1,283 @@
+{
+  "session_id": "4699239040",
+  "session_index": 42,
+  "num_turns": 17,
+  "num_goals_detected": 3,
+  "num_failures": 0,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "can you find me a guest house that has free wifi in this town?",
+      "agent_response": "There are 23 guesthouses in town with free wifi. Do you have a price range?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1: finding a guesthouse with wifi"
+    },
+    {
+      "turn_number": 2,
+      "user_message": "How about one that has a 4 star rating and is expensive?",
+      "agent_response": "Unfortunately, there are no guesthouses that meet you needs. There are 2 hotels if you are interested. ",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues same guesthouse search, adding rating/price constraints"
+    },
+    {
+      "turn_number": 3,
+      "user_message": "What about something in the moderate price range, instead?",
+      "agent_response": "Yes I have many choices in that category. Would you like me to suggest something?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing same guesthouse search, modifying price range"
+    },
+    {
+      "turn_number": 4,
+      "user_message": "book a hotel for 8 people and 3 nights starting from saturday.",
+      "agent_response": "Please clarify if you want a guesthouse or a hotel. There are no hotels that match your needs but there are 11 guesthouses that do.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Moving to booking the guesthouse - part of same accommodation goal"
+    },
+    {
+      "turn_number": 5,
+      "user_message": "I want a guesthouse.",
+      "agent_response": "Would you like me to book you for avalon?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Clarifying guesthouse booking details"
+    },
+    {
+      "turn_number": 6,
+      "user_message": "Yes, please book for 8 people for 3 nights, starting from Saturday.",
+      "agent_response": "You're all set to arrive on Saturday. Your Reference number is : 5D3TISUX.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Completing the guesthouse booking"
+    },
+    {
+      "turn_number": 7,
+      "user_message": "great, thanks. i'm also looking for places to go in town. ",
+      "agent_response": "Ok.  There are many great things to do in town.  Did you have something particular in mind?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 2: looking for attractions ('places to go')"
+    },
+    {
+      "turn_number": 8,
+      "user_message": "I would like a place that is fun and serves drinks.",
+      "agent_response": "Sure! Would you rather a nightclub type of environment or more of a park or entertainment venue?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing attraction search discussion"
+    },
+    {
+      "turn_number": 9,
+      "user_message": "Actually, is there a swimming pool around?",
+      "agent_response": "which part of town should it be?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing attractions, now specifically swimming pools"
+    },
+    {
+      "turn_number": 10,
+      "user_message": "it should be in the south",
+      "agent_response": "I'm sorry, but there are no swimming pools in the south. Would you like to try a different area or attraction type?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing swimming pool search discussion"
+    },
+    {
+      "turn_number": 11,
+      "user_message": "what options are available",
+      "agent_response": "There are swimming pools in the east, north and centre of town. The south has cinema, entertainment, museum, nightclub, theatre and parks. Have a preference?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Exploring attraction options in different areas"
+    },
+    {
+      "turn_number": 12,
+      "user_message": "I would prefer the south please.",
+      "agent_response": "What type of attraction in the south? There are 8 results ranging from cinema, museums, nightclubs, parks.  Which would interest you?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing attraction options in south"
+    },
+    {
+      "turn_number": 13,
+      "user_message": "If there are no swimming pools in the south, then I would consider a cinema in the south of town.",
+      "agent_response": "Cineworld Cinema is in the south. Would you like additional information?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Narrowing down to cinema attraction"
+    },
+    {
+      "turn_number": 14,
+      "user_message": "Yes, may I please have their address and phone number. ",
+      "agent_response": "Yes, their address is cambridge leisure park, clifton way and their phone number is 00872208000. ",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Getting cinema details - same attraction goal"
+    },
+    {
+      "turn_number": 15,
+      "user_message": "I also need a taxi to leave the hotel by 22:45. Please provide the contact number and car type.",
+      "agent_response": "What is your destination, and when do you want to arrive by?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 3: booking a taxi"
+    },
+    {
+      "turn_number": 16,
+      "user_message": "I'll be going from the hotel to the cinema. I need to leave by 22:45. ",
+      "agent_response": "I booked a grey skoda for you, contact number is 07059639997!",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Completing taxi booking details"
+    },
+    {
+      "turn_number": 17,
+      "user_message": "Thank you so much. That is all that I need at this time. Goodbye!",
+      "agent_response": "Thank you. Have a nice day.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Closing conversation, no new goal"
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user starts Goal 1: finding a guesthouse with wifi"
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continues same guesthouse search, adding rating/price constraints"
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing same guesthouse search, modifying price range"
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Moving to booking the guesthouse - part of same accommodation goal"
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Clarifying guesthouse booking details"
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Completing the guesthouse booking"
+    },
+    {
+      "turn_number": 7,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 2: looking for attractions ('places to go')"
+    },
+    {
+      "turn_number": 8,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing attraction search discussion"
+    },
+    {
+      "turn_number": 9,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing attractions, now specifically swimming pools"
+    },
+    {
+      "turn_number": 10,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing swimming pool search discussion"
+    },
+    {
+      "turn_number": 11,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Exploring attraction options in different areas"
+    },
+    {
+      "turn_number": 12,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Still discussing attraction options in south"
+    },
+    {
+      "turn_number": 13,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Narrowing down to cinema attraction"
+    },
+    {
+      "turn_number": 14,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Getting cinema details - same attraction goal"
+    },
+    {
+      "turn_number": 15,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to Goal 3: booking a taxi"
+    },
+    {
+      "turn_number": 16,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Completing taxi booking details"
+    },
+    {
+      "turn_number": 17,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Closing conversation, no new goal"
+    }
+  ]
+}

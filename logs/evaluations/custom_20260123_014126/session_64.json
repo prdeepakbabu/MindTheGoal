@@ -1,0 +1,139 @@
+{
+  "session_id": "4700064832",
+  "session_index": 64,
+  "num_turns": 8,
+  "num_goals_detected": 3,
+  "num_failures": 1,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_message": "Is it true Cambridge has the best attractions?  We are looking for something unusual to do in the centre.",
+      "agent_response": "There is teh museum of archeology and anthropology in the centre that is free of charge",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about attractions in center. This is Goal 1."
+    },
+    {
+      "turn_number": 2,
+      "user_message": "That's perfect. Thanks so much for your help.",
+      "agent_response": "You're welcome. Is there anything else I can assist you with?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up to attractions discussion, same goal."
+    },
+    {
+      "turn_number": 3,
+      "user_message": "Yes can you help me find a place to eat too?",
+      "agent_response": "I'd be happy to help with your request, what area and what type of cuisine are you looking for?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to new topic - restaurants. This is Goal 2."
+    },
+    {
+      "turn_number": 4,
+      "user_message": "I would like chinese. ",
+      "agent_response": "I'm afraid our restaurant system is currently down.  Can I help you with something else at this time?",
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E5",
+      "reasoning": "Continuing restaurant discussion but system reports being down."
+    },
+    {
+      "turn_number": 5,
+      "user_message": "i would like to go site seeing",
+      "agent_response": "Other than the museum previously mentioned, I also suggest checking out the Cambridge University Botanic Gardens on Bateman Street. ",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Returns to attractions discussion from Goal 1, not a new goal."
+    },
+    {
+      "turn_number": 6,
+      "user_message": "Ok, I think we've already established the attraction in the town centre. The next thing I need is a HOTEL in the centre that includes free parking.",
+      "agent_response": "The bold letters tells me no interest in a guesthouse huh?  I ran a search there are two hotels, gonville and university arms.  Any preference?",
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User explicitly switches to new topic - hotels. This is Goal 3."
+    },
+    {
+      "turn_number": 7,
+      "user_message": "i'd like the gonville please. make a reservation if you can for thursday for 1 person, 3 nights. ",
+      "agent_response": "Booking was successful.  Reference number is W0P1SD78.  Anything else I can help you with today?",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing hotel booking discussion, same goal."
+    },
+    {
+      "turn_number": 8,
+      "user_message": "No. That is all for now.",
+      "agent_response": "Thank you for using the Cambridge TownInfo centre. Goodbye.",
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Closing conversation, same hotel goal."
+    }
+  ],
+  "raw_llm_response": [
+    {
+      "turn_number": 1,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "First turn - user asks about attractions in center. This is Goal 1."
+    },
+    {
+      "turn_number": 2,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Follow-up to attractions discussion, same goal."
+    },
+    {
+      "turn_number": 3,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User switches to new topic - restaurants. This is Goal 2."
+    },
+    {
+      "turn_number": 4,
+      "is_new_goal": false,
+      "quality": "failure",
+      "rcof": "E5",
+      "reasoning": "Continuing restaurant discussion but system reports being down."
+    },
+    {
+      "turn_number": 5,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Returns to attractions discussion from Goal 1, not a new goal."
+    },
+    {
+      "turn_number": 6,
+      "is_new_goal": true,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "User explicitly switches to new topic - hotels. This is Goal 3."
+    },
+    {
+      "turn_number": 7,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Continuing hotel booking discussion, same goal."
+    },
+    {
+      "turn_number": 8,
+      "is_new_goal": false,
+      "quality": "success",
+      "rcof": null,
+      "reasoning": "Closing conversation, same hotel goal."
+    }
+  ]
+}
